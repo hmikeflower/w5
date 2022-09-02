@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TaiwanSamYT-test</title>
+    </head>
+    <hl id="genious">我不是天才</hl><br>
+    <hl id="genious2"></hl><br>
+    <input type="text" id="num">
+    <button onclick="getnum()">平方</button>
+    <input type="text" id="output">
+    <script>
+        function changetext(){
+            window.document.getElementById("genious").innerHTML="但我是個人才";
+            window.document.getElementById("genious2").innerHTML="要當學霸不是考好 是考得比別人好";
+        }
+        function getnum(){
+            var num=document.getElementById("num");
+            if(num<0){
+            document.getElementById("output").value=number(num)*number(num);}
+            else{
+            document.getElementById("output").value=number(num)+number(num);}
+        }
+    </script>
+    <button onclick='changetext()'>但...</button>
+    </body>
+</html>

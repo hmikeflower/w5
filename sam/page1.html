@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TaiwanSamYT-page1</title>
+    </head>
+    <body>
+    <a href="http://127.0.0.1:8080/shoppingwebsite/shop.php?account=&password="><button>hi</button></a><br><br>
+    <script>
+        function east(){
+            var x=window.document.getElementById("direction");
+            var y=window.document.getElementById("thing");
+            x.innerHTML="東";
+            y.innerHTML="鴨頭";}
+        function west(){
+            var x=window.document.getElementById("direction");
+            var y=window.document.getElementById("thing");
+            x.innerHTML="西";
+            y.innerHTML="日落";}
+        function south(){
+            var x=window.document.getElementById("direction");
+            var y=window.document.getElementById("thing");
+            x.innerHTML="南";
+            y.innerHTML="人壽";}
+        function north(){
+            var x=window.document.getElementById("direction");
+            var y=window.document.getElementById("thing");
+            x.innerHTML="北";
+            y.innerHTML="狗肉";}
+    </script>
+    <button onclick="east()">東</button>
+    <button onclick="west()">西</button>
+    <button onclick="south()">南</button>
+    <button onclick="north()">北</button>
+    <div>
+        <br><span id="direction">東</span>山<span id="thing">鴨頭</span><br>
+    </div>
+    </body>
+</html>
