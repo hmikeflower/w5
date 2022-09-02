@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TEST</title>
+    </head>
+    <body>
+    <h1 id="h1">我是一個標題</h1>
+    <p id="p1"></p>
+    嘿嘿嘿:<input type="text" id="text1" value="我會改變呦"><br>
+    <button onclick="changetext()">我要改變</button><hr>
+    請輸入運算方法(1是加法,2是減法,3是乘法,4是除法):<input type="text" id="text2"><br>
+    請輸入第一個數字:<input type="text" id="Nunber1" name="Nunber1"><br>
+    請輸入第二個數字:<input type="text" id="Nunber2" name="Nunber2"><br>
+    <button onclick="gettext()">開始運算</button>
+    答案:<p id="p2"></p>
+    <script>
+    var get=0;
+    function changetext(){
+        window.document.getElementById("h1").innerHTML='哈哈我改變了';
+        window.document.getElementById("p1").innerHTML='哈哈我出現了';
+        window.document.getElementById("text1").value='嘿嘿我改變了';
+    }
+    function gettext(){
+        get=window.document.getElementById("text2").value;
+        var a=window.document.getElementById("Nunber1").value,b=window.document.getElementById("Nunber2").value;
+        a=Number(a);
+        b=Number(b);
+        if(get==1){
+            window.document.getElementById('p2').innerHTML=a+b;
+        }
+        else if(get==2){
+            window.document.getElementById('p2').innerHTML=a-b;
+        }
+        else if(get==3){
+            window.document.getElementById('p2').innerHTML=a*b;
+        }
+        else if(get==4){
+            window.document.getElementById('p2').innerHTML=a/b;
+        }
+        else{
+            window.document.getElementById('p2').innerHTML=('無解');
+        }
+    }
+    </script><hr>
+    時間:<p id="p3"></p>點
+    <button onclick="gettime(1)" id="timeUSA-H">美國時間</button>
+    <button onclick="gettime(2)" id="timeUK-H">英國時間</button>
+    <button onclick="gettime(3)" id="timeCH-H">中國時間</button>
+    <button onclick="gettime(4)" id="timeJa-H">日本時間</button><br>
+    <script>
+    function gettime(x){
+        switch(x){
+            case 1:
+            document.getElementById('p3').innerHTML=7;
+            break;
+            case 2:
+            document.getElementById('p3').innerHTML=11;
+            break;
+            case 3:
+            document.getElementById('p3').innerHTML=18;
+            break;
+            case 4:
+            document.getElementById('p3').innerHTML=20;
+            break;
+            default:
+            document.getElementById('p3').innerHTML='無解';
+        } 
+    }
+    </script><hr>
+    亂數:<p id="p4"></p>
+    範圍:<input type="text" id="range" value=""><br>
+    <button onclick="getnumber()">產生亂數</button><br>
+    <button onclick="button()">按我啊</button>
+    <script>
+    function getnumber(){
+        var a=document.getElementById('range').value;
+        a=Number(a);
+        document.getElementById('p4').innerHTML=Math.floor(Math.random()*a);
+    }
+    function button(){
+        for(var i=1;i<=5;i++){
+            alert('1');
+        }
+    }
+    </script><hr>
+    <h2>重複亂數擲骰子</h2>
+    範圍:<input type="text" id="Range"><br>
+    次數:<input type="text" id="time">
+    <button onclick="num()">出數</button>
+    亂數:<div id="number"></div>
+    <script>
+    var time=document.getElementById("number").value;
+    function num(){
+        var word="",times=[];
+        for(var i=1;i<=document.getElementById("time").value;i++){
+            times.push(0);
+        }
+        for(var i=1;i<=document.getElementById("time").value;i++){
+            word=word+String(document.getElementById("number").innerHTML="第"+String(i)+"個數字:"+String(Math.floor(Math.random()*Number(document.getElementById('Range').value))))+"<br>";
+        }
+        document.getElementById('number').innerHTML=word;
+    }
+    </script><hr>
+    數字:<input type="text" id="pyramid">
+    <script>
+    var i=0,j=1;
+    var aa="",bb=6;   
+    while(j<4){
+        while(i<j){
+        aa=aa+j;
+            i++;
+        }
+        j++;
+        console.log(aa);
+    }
+    </script>
+    </body>
+</html>
