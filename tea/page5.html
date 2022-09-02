@@ -1,0 +1,24 @@
+<html>
+    <head>
+    <title>
+    </title>
+    </head>
+    <body>
+        <div id="aaa"></div>
+        <input type="button" name="sub" value="停止計時" onclick="stop()"/>
+
+        <script>
+        var timer=setInterval("com()",1000);
+        var cnt=0;
+        function com()
+            {
+            cnt=cnt+1;
+	        document.getElementById("aaa").innerHTML="經過:"+cnt+"秒";
+            }
+        function stop()
+            {
+            clearInterval(timer);	
+            }
+        </script>
+    </body>
+    </html>

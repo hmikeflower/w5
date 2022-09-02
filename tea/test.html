@@ -1,0 +1,95 @@
+
+<html>
+    <head>
+    <title>
+    </title>
+    </head>
+    <body>
+        <h1 id = "h1">我是一個標題</h1>
+        <p id = "p1"></p>
+        哈哈哈：<input type = text id="text1" value="77777">
+        </br>
+        <button onclick="changtext()">我要改變</button>
+        <h5>================================================================</h5></br>
+        
+        請輸入運算方法：<input type = text id="text2" ></br>
+        請輸入數字 1 ：<input type = text id="number1" ></br>
+        請輸入數字 2 ：<input type = text id="number2" ></br>
+        <button onclick="gettext()">開始運算</button>
+        <p id = "p2"></p>
+
+        <h5>================================================================</h5></br>
+        標準時間：<p id = "p3"></p>
+        請輸入數字 1 ：<input type = text id="number3" ></br>
+        <button onclick="gettime(1)">時間出現</button>
+        
+        <h5>================================================================</h5>
+        亂數：<div id = "p4"></div>
+        請輸入數字  ：<input type = text id="number3" ></br>
+        <button onclick="haha(1,2,3)">產生亂數</button>
+
+        <script>
+            var bb = haha(1,2,3);
+            alert(bb);
+            function haha(n1,n2,n3){
+                var aaa=n1+n2+n3;
+                console.log(aaa);
+                return aaa;
+                
+            }
+
+
+            function getrandom(){
+                var testa = "";
+                for (let i = 1; i <= 15; i++){
+                testa = testa+"迴圈第"+i+"次"+"</br>";
+                }
+                var el = document.getElementById("p4");
+                el.innerHTML = testa;
+            }
+            function getrandom1(){
+                
+                
+                window.document.getElementById("p4").innerHTML = aa ;
+            }
+            function changtext(){
+                window.document.getElementById("h1").innerHTML = "哈哈我改變了" ;
+                window.document.getElementById("p1").innerHTML = "哈哈我出現了" ;
+                document.getElementById("text1").value = "00000"
+            }
+            
+            function gettime(x){
+                let a = document.getElementById("number3").value;
+                a = Number(a);
+                document.getElementById("p3").innerHTML = a;
+                switch (a){
+                    case 1:
+                        
+                        break;
+                
+                    case 2:
+                    
+                        break;
+                    
+                        default:
+                        
+                        break;
+
+                }
+            }
+
+            function gettext(){
+                let a = document.getElementById("text2").value;
+                a = Number(a);
+                var b = document.getElementById("number1").value;
+                b = Number(b);
+                var c = document.getElementById("number2").value;
+                c = Number(c);
+               
+               if (a==1){
+                window.document.getElementById("p2").innerHTML = b+c ;
+               }
+            }
+        </script>
+    </body>
+    </html>

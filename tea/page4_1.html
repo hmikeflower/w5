@@ -1,0 +1,33 @@
+<html>
+    <head>
+    <title>
+    </title>
+    </head>
+    <body>
+        <h1>JavaScript for loop</h1>
+        <h4>var cars = ["BMW", "Volvo", "porsche", "Ford", "Fiat", "Audi"];</h4>
+        <h3>介紹與解釋length 與 console.log </h3>
+        <label for="domTextElement">nb1: </label>
+        <input type="text" id="domTextElement" > 
+        <button onclick="test()">test</button>
+        <p id="demo"></p>
+        <button onclick="looptest()">產生亂數</button>
+        
+        
+        <script>
+        function looptest(){
+            var cars = ["BMW", "Volvo", "porsche", "Ford", "Fiat", "Audi"];
+            var text = "";
+            var i;
+            for (i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+                }
+            document.getElementById("demo").innerHTML = text;
+
+        }
+        
+        
+        
+        </script>
+    </body>
+    </html>

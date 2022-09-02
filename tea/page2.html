@@ -1,0 +1,80 @@
+
+<html>
+    <head>
+    <title>
+    </title>
+    </head>
+    <body>
+        
+     <script>
+         
+         //單行註解
+        /* 多行註解
+        12345567788
+        */
+
+        //資料
+        15;//整數
+        15.55;//float
+        "字串";
+        '文字';
+        true;
+        false;
+        
+
+        //但是以上目前沒有作用
+
+        //變數  使用前 先宣告 使用 var
+        //var x ;
+        //var x = 10; //= 的意思要特別注意  是指將用右邊的數字放到 變數Ｘ
+
+        //alert(x);
+        //var a,b;
+        //var a=10,b=20;
+
+
+        //算術運算子   
+        15+20;
+        //alert(15+20);
+        var count = 15-15;
+        //alert(count);
+        //單元運算子
+        count ++;
+        //alert(count);   
+        count ++;
+        //alert(count);   
+        //比較運算子  比較完之後 只會有 ＴorF
+        
+        
+        //var x =4 ==4;  //一個＝與兩個＝＝ 差別是什麼？
+        //alert(x);
+
+        //範例 有感覺的程式 
+        // 使用者輸入-> 程式運算 輸出給使用者看
+        //語法 prompt("提示文字",預設值)
+        //var n1=prompt("請輸入文字",1);
+        //var n2=prompt("請輸入文字",1);
+        //alert(n1*n2);
+        
+        function test(){
+            var x = window.document.getElementById("day");
+            x.innerHTML="bad";
+        }
+        function test1(){
+            var x = window.document.getElementById("day");
+            x.innerHTML="baaaad";
+        }
+    </script>
+
+    <button onclick="test()">按鈕1</button>
+    <button onclick="test1()">按鈕2</button>
+    
+    <div>
+        Today is <span id="day">good</span> day</br>
+        123y</br>
+        wey</br>
+    </div>
+
+
+    </body>
+    </html>

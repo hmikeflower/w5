@@ -1,0 +1,64 @@
+
+<html>
+    <head>
+    <title>
+    </title>
+    </head>
+    <body>
+        <p id="test">JavaScript test</p>  <!--   <p> 是段落   -->
+        <button type="button" onclick='document.getElementById("test").innerHTML = "Hello JavaScript!"'>点击我！</button>
+        <button type="button" onclick='document.getElementById("test").innerHTML = "JavaScript!"'>点击我2！</button>
+        
+        <p id="test">"數值運算"</p>  <!--   <p> 是段落   -->
+        <label for="domTextElement">nb1: </label>
+        <input type="text" id="domTextElement" >  
+        <label for="domTextElement1">nb2: </label>
+        <input type="text" id="domTextElement1" >  
+        <button type="button"  onclick="getValueInput()"> 點擊我!! </button> 
+
+            <p id="valueInput"></p> 
+
+            <script> 
+            
+            
+              const getValueInput = () =>{
+                let inputValue1 = document.getElementById("domTextElement").value; 
+                let inputValue2 = document.getElementById("domTextElement1").value; 
+                document.getElementById("valueInput").innerHTML = Number(inputValue1)+Number(inputValue2); 
+              }
+              
+            </script> 
+
+            <h1>開始講解</h1>
+            java script 用途</br>
+            a.讓網頁更豐富，且可以跟使用者互動</br>
+            <input type ="button" onclick="location.href='http://127.0.0.1:5500/test.html'" name="buttontest1" value="功能合集">
+            <h1>5/27 變數與運算子 簡易互動程式</h1>
+            a.資料型態：數字,字串,布林值,物件。</br>
+            b.變數：命名規則</br>
+            c.運算子</br>
+            <input type ="button" onclick="location.href='http://127.0.0.1:5500/page2.html'" name="buttontest1" value="跳去分頁">
+            </br>
+            <h1>開始講解</h1>
+            java script 用途</br>
+            a.讓網頁更豐富，且可以跟使用者互動</br>
+            
+            <h1>6/03 判斷 迴圈 迴圈追蹤</h1>
+            a.判斷式。</br>
+            1. IF判斷   2.switch 判斷。</br>
+            <input type ="button" onclick="location.href='http://127.0.0.1:5500/javascript/page3.html'" name="buttontest1" value="判斷式。">
+          </br>
+            b.迴圈</br>
+            <input type ="button" onclick="location.href='http://127.0.0.1:5500/javascript/page4.html'" name="buttontest1" value="迴圈">
+            1.for 迴圈</br>
+            2.while & do while</br>
+            c.迴圈追蹤</br>
+            <h2>特別語法</h2>
+            console.log()</br>
+            函式講解</br>
+            <input type ="button" onclick="location.href='https://ithelp.ithome.com.tw/articles/10191549'" name="buttontest1" value="函式">
+
+            <h2>8/12 setInterval()</h2>
+            <input type ="button" onclick="location.href='http://127.0.0.1:5500/javascript/page5.html'" name="buttontest1" value="時間">
+    </body>
+    </html>
