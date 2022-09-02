@@ -1,0 +1,11 @@
+<p id="t"></p>
+<p id="time"></p>
+<script>
+var t = new Date();
+document.getElementById("t").innerHTML=t;
+var x=[new Date().getFullYear(),new Date().getMonth()+1,new Date().getDate(),new Date().getHours(),new Date().getMinutes(),new Date().getSeconds()],b=[],c=['年','月','日','時','分','秒'];
+for(var i=0;i<x.length;i++){
+    b=b+'現在是'+x[i]+c[i]+'<br>';
+    document.getElementById("time").innerHTML=b;
+}
+</script>

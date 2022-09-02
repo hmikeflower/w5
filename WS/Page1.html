@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>12345</title>
+    </head>
+    <body>
+    <script>
+    //單行註解
+    /*多行註解
+    1234567890
+    */
+    /*var x=4 ==4;
+    alert(x);
+    var n1=prompt('請輸入',1);
+    var n2=prompt('請輸入',1);
+    alert(n1*n2);*/
+    function test1(){
+        var x= window.document.getElementById('day');
+        x.innerHTML='bad';
+    }
+    function test2(){
+        var x= window.document.getElementById('day');
+        x.innerHTML='terrible';
+    }
+    function test3(){
+        var x= window.document.getElementById('day');
+        x.innerHTML='great';
+    }
+    test1();
+    </script>
+    <div>Today is a <span id="day">good</span> day.</div>
+    </body>
+</html>
+<button onclick="test1()">test1</button>
+<button onclick="test2()">test2</button>
+<button onclick="test3()">test3</button>
