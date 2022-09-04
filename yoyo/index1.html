@@ -16,5 +16,22 @@
     }
     </script>
     <hr>
+    <h1>建立物件</h1>
+    <script>
+    var student = new Object();
+    student.boy=20;
+    student.girl=10;
+    student.height=180;
+    student.weight=60;
+    student.score=100;
+    student.nothing=function(){
+        alert("男生人數"+student.boy+'人');
+        alert("女生人數"+student.girl+'人');
+        alert("全班平均身高"+student.height+'公分');
+        alert("全班平均體重"+student.weight+'公斤');
+        alert("全班平均成績"+student.score+'分');
+    }
+    student.nothing();
+    </script>
     </body>
 </html>
