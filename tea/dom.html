@@ -31,8 +31,16 @@
 
 
             let domtest = new Object();
+                domtest.count=0
                 domtest.show=function(){
-                    document.getElementById("t1").innerHTML = "高度"+window.innerHeight+" 寬度"+window.innerWidth
+                    if (this.count==0){
+                        document.getElementById("t1").innerHTML = "高度"+window.innerHeight+" 寬度"+window.innerWidth
+                        this.count=this.count+1;
+                    }
+                    else {
+                        document.getElementById("t1").innerHTML = " ";
+                        this.count=0;
+                    }
                 }
             </script>
     </body>
