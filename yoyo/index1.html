@@ -18,20 +18,20 @@
     <hr>
     <h1>建立物件</h1>
     <script>
-    var student = new Object();
-    student.boy=20;
-    student.girl=10;
-    student.height=180;
-    student.weight=60;
-    student.score=100;
-    student.nothing=function(){
-        alert("男生人數"+student.boy+'人');
-        alert("女生人數"+student.girl+'人');
-        alert("全班平均身高"+student.height+'公分');
-        alert("全班平均體重"+student.weight+'公斤');
-        alert("全班平均成績"+student.score+'分');
+    var me = new Object();
+    me.interest='騎腳踏車';
+    me.ability='不回迷路';
+    me.personality='隨和';
+    me.experience='班長';
+    me.unforgettablememory='吃蟑螂';
+    me.nothing=function(){
+        alert("興趣："+me.interest);
+        alert("能力："+me.ability);
+        alert("個性："+me.personality);
+        alert("經歷："+me.experience);
+        alert("難忘回憶："+me.unforgettablememory);
     }
-    student.nothing();
+    me.nothing();
     </script>
     </body>
 </html>
