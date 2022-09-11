@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TaiwanSamYT-GETHOURS</title>
+    </head>
+    <body>
+        用switch做
+        <button onclick='time("陳時中")'>陳時中</button>
+        <button onclick='time("本地時鐘")'>本地時鐘</button>
+        <button onclick='time("國際標準時鐘")'>國際標準時鐘</button><br>
+        時間:<span id="time"></span>點
+        <script>
+            function time(place){
+                switch(place){
+                    case "陳時中":
+                        document.getElementById("time").innerHTML="歡樂100";
+                        break;
+                    case "本地時鐘":
+                        document.getElementById("time").innerHTML=new Date().getHours();
+                        break;
+                    case "國際標準時鐘":
+                        var time=new Date().getHours()-8;
+                        document.getElementById("time").innerHTML=time;
+                        break;}}
+        </script>
+    </body>
+</html>
+

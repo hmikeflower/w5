@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TaiwanSamYT-Multiplication</title>
+    </head>
+    <body>
+        乘法表<br>
+        第一數範圍:<input type="text" id="num1_for_multiplication"><br>
+        第二數範圍:<input type="text" id="num2_for_multiplication">
+        <button onclick='multiplication(document.getElementById("num1_for_multiplication").value,document.getElementById("num2_for_multiplication").value)'>出數</button><br>
+        九九乘法表:<div id="multiplication_output"></div>
+        <script>
+            function multiplication(num1,num2){
+                var word="";
+                for(var i=1;i<=num1;i++){
+                    var j=1;
+                    while(j<=num2){
+                        word=word+j+"*"+i+"="+i*j+" ";
+                    j++;}
+                    word=word+"<br>";}
+                document.getElementById("multiplication_output").innerHTML=word;}
+        </script>
+    </body>
+</html>
+

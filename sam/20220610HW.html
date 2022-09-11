@@ -3,128 +3,128 @@
         <meta charset="utf-8">
         <title>TaiwanSamYT-20220610HW</title>
     </head>
-    第一個數字:<input type="text" id="number1"><br>
-    第二個數字:<input type="text" id="number2"><br>
-    <button onclick='plus()'>加</button>
-    <button onclick='minus()'>減</button>
-    <button onclick='multiple()'>乘</button>
-    <button onclick='divide()'>除</button><br>
-    答案:<input type="text" id="output">
-    <script>
-        function plus(){
-            var num1=document.getElementById("number1").value;
-            var num2=document.getElementById("number2").value;
-            document.getElementById("output").value=Number(num1)+Number(num2);}
-        function minus(){
-            var num1=document.getElementById("number1").value;
-            var num2=document.getElementById("number2").value;
-            document.getElementById("output").value=Number(num1)-Number(num2);}
-        function multiple(){
-            var num1=document.getElementById("number1").value;
-            var num2=document.getElementById("number2").value;
-            document.getElementById("output").value=Number(num1)*Number(num2);}
-        function divide(){
-            var num1=document.getElementById("number1").value;
-            var num2=document.getElementById("number2").value;
-            document.getElementById("output").value=Number(num1)/Number(num2);}
-    </script><hr>
+    <body>
+        第一個數字:<input type="text" id="number1"><br>
+        第二個數字:<input type="text" id="number2"><br>
+        <button onclick='plus()'>加</button>
+        <button onclick='minus()'>減</button>
+        <button onclick='multiple()'>乘</button>
+        <button onclick='divide()'>除</button><br>
+        答案:<input type="text" id="output">
+        <script>
+            function plus(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)+Number(num2);}
+            function minus(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)-Number(num2);}
+            function multiple(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)*Number(num2);}
+            function divide(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)/Number(num2);}
+        </script><hr>
 
-    用switch做
-    <button onclick='time("陳時中")'>陳時中</button>
-    <button onclick='time("本地時鐘")'>本地時鐘</button>
-    <button onclick='time("國際標準時鐘")'>國際標準時鐘</button><br>
-    時間:<span id="time"></span>點
-    <script>
-        function time(place){
-            switch(place){
-                case "陳時中":
-                    document.getElementById("time").innerHTML="歡樂100";
-                    break;
-                case "本地時鐘":
-                    document.getElementById("time").innerHTML=new Date().getHours();
-                    break;
-                case "國際標準時鐘":
-                    var time=new Date().getHours()-8;
-                    document.getElementById("time").innerHTML=time;
-                    break;}}
-    </script><hr>
+        用switch做
+        <button onclick='time("陳時中")'>陳時中</button>
+        <button onclick='time("本地時鐘")'>本地時鐘</button>
+        <button onclick='time("國際標準時鐘")'>國際標準時鐘</button><br>
+        時間:<span id="time"></span>點
+        <script>
+            function time(place){
+                switch(place){
+                    case "陳時中":
+                        document.getElementById("time").innerHTML="歡樂100";
+                        break;
+                    case "本地時鐘":
+                        document.getElementById("time").innerHTML=new Date().getHours();
+                        break;
+                    case "國際標準時鐘":
+                        var time=new Date().getHours()-8;
+                        document.getElementById("time").innerHTML=time;
+                        break;}}
+        </script><hr>
 
-    範圍:<input type="text" id="range">
-    <button onclick='random_number()'>出數</button><br>
-    亂數:<span id="random_num"></span>
-    <script>
-        function random_number(){
-            document.getElementById("random_num").innerHTML=Math.floor(Math.random()*Number(document.getElementById("range").value));}
-    </script><hr>
-    範圍:<input type="text" id="range_for_many_num"><br>
-    次數:<input type="text" id="frequency">
-    <button onclick='many_random_num()'>出數</button><br>
-    亂數:<div id="many_random_num_output"></div>
-    <script>
-        function many_random_num(){
-            var word="",times_of_num=[];
-            for(var i=1;i<=document.getElementById("frequency").value;i++){
-                times_of_num.push(0);}
-            for(var i=1;i<=document.getElementById("frequency").value;i++){
-                word=word+String(document.getElementById("many_random_num_output").innerHTML="第"+String(i)+"個數字:"+String(Math.floor(Math.random()*Number(document.getElementById("range_for_many_num").value))))+"<br>";}
-            document.getElementById("many_random_num_output").innerHTML=word;}
-    </script><hr>
+        範圍:<input type="text" id="range">
+        <button onclick='random_number()'>出數</button><br>
+        亂數:<span id="random_num"></span>
+        <script>
+            function random_number(){
+                document.getElementById("random_num").innerHTML=Math.floor(Math.random()*Number(document.getElementById("range").value));}
+        </script><hr>
+        範圍:<input type="text" id="range_for_many_num"><br>
+        次數:<input type="text" id="frequency">
+        <button onclick='many_random_num()'>出數</button><br>
+        亂數:<div id="many_random_num_output"></div>
+        <script>
+            function many_random_num(){
+                var word="",times_of_num=[];
+                for(var i=1;i<=document.getElementById("frequency").value;i++){
+                    times_of_num.push(0);}
+                for(var i=1;i<=document.getElementById("frequency").value;i++){
+                    word=word+String(document.getElementById("many_random_num_output").innerHTML="第"+String(i)+"個數字:"+String(Math.floor(Math.random()*Number(document.getElementById("range_for_many_num").value))))+"<br>";}
+                document.getElementById("many_random_num_output").innerHTML=word;}
+        </script><hr>
 
-    次數:<input type="text" id="frequency_for_pyramid">
-    <button onclick='pyramid(document.getElementById("frequency_for_pyramid").value)'>蓋出金字塔</button><br>
-    金字塔:<div id="pyramid_output"></div>
-    <script>
-        function pyramid(frequency){
-            var i=1,word="";
-            do{
-                var j=1;
+        次數:<input type="text" id="frequency_for_pyramid">
+        <button onclick='pyramid(document.getElementById("frequency_for_pyramid").value)'>蓋出金字塔</button><br>
+        金字塔:<div id="pyramid_output"></div>
+        <script>
+            function pyramid(frequency){
+                var i=1,word="";
                 do{
-                    word=word+i;
-                    j++;
-                }while(j<=i);
-                word=word+"<br>";
-                i++;
-            }while(i<=frequency);
-            document.getElementById("pyramid_output").innerHTML=word;}
-    </script><hr>
+                    var j=1;
+                    do{
+                        word=word+i;
+                        j++;
+                    }while(j<=i);
+                    word=word+"<br>";
+                    i++;
+                }while(i<=frequency);
+                document.getElementById("pyramid_output").innerHTML=word;}
+        </script><hr>
     
-    第一數範圍:<input type="text" id="num1_for_multiplication"><br>
-    第二數範圍:<input type="text" id="num2_for_multiplication">
-    <button onclick='multiplication(document.getElementById("num1_for_multiplication").value,document.getElementById("num2_for_multiplication").value)'>出數</button><br>
-    九九乘法表:<div id="multiplication_output"></div>
-    <script>
-        function multiplication(num1,num2){
-            var word="";
-            for(var i=1;i<=num1;i++){
-                var j=1;
-                while(j<=num2){
-                    word=word+j+"*"+i+"="+i*j+" ";
-                j++;}
-                word=word+"<br>";}
-            document.getElementById("multiplication_output").innerHTML=word;}
-    </script>
-    <script>
-        var i=0;
-        while(i<10){
-            console.log(i);
-            i++;
-        }
-    </script>
+        第一數範圍:<input type="text" id="num1_for_multiplication"><br>
+        第二數範圍:<input type="text" id="num2_for_multiplication">
+        <button onclick='multiplication(document.getElementById("num1_for_multiplication").value,document.getElementById("num2_for_multiplication").value)'>出數</button><br>
+        九九乘法表:<div id="multiplication_output"></div>
+        <script>
+            function multiplication(num1,num2){
+                var word="";
+                for(var i=1;i<=num1;i++){
+                    var j=1;
+                    while(j<=num2){
+                        word=word+j+"*"+i+"="+i*j+" ";
+                    j++;}
+                    word=word+"<br>";}
+                document.getElementById("multiplication_output").innerHTML=word;}
+        </script>
+        <script>
+            var i=0;
+            while(i<10){
+                console.log(i);
+                i++;}
+        </script>
     
-    <p id="id">tt</p>
-    <script>
-        date=new Date()
-        var time_detail=[date.getFullYear(),date.getMonth(),date.getDay(),date.getHours(),date.getMinutes(),date.getSeconds()];
-        var time_format=["年","月","日","時","分","秒"];
-        var array_output="現在是"+"<br>";
-        i=0;
-        while(i<time_detail.length){
-            array_output=array_output+time_detail[i]+time_format[i];
-            if (i==0 || i==2){
-                array_output=array_output+"<br>"}
-            i++;}
-        document.getElementById("id").innerHTML=array_output;
-    </script>
+        <p id="id"></p>
+        <script>
+            date=new Date()
+            var time_detail=[date.getFullYear(),date.getMonth(),date.getDay(),date.getHours(),date.getMinutes(),date.getSeconds()];
+            var time_format=["年","月","日","時","分","秒"];
+            var array_output="現在是"+"<br>";
+            i=0;
+            while(i<time_detail.length){
+                array_output=array_output+time_detail[i]+time_format[i];
+                if (i==0 || i==2){
+                    array_output=array_output+"<br>"}
+                i++;}
+            document.getElementById("id").innerHTML=array_output;
+        </script>
     </body>
 </html>
 
