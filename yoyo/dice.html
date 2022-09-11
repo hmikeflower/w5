@@ -1,0 +1,17 @@
+範圍:<input type="text" id="Range"><br>
+次數:<input type="text" id="time">
+<button onclick="num()">出數</button>
+亂數:<div id="number"></div>
+<script>
+var time=document.getElementById("number").value;
+function num(){
+    var word="",times=[];
+    for(var i=1;i<=document.getElementById("time").value;i++){
+        times.push(0);
+    }
+    for(var i=1;i<=document.getElementById("time").value;i++){
+        word=word+String(document.getElementById("number").innerHTML="第"+String(i)+"個數字:"+String(Math.floor(Math.random()*Number(document.getElementById('Range').value))))+"<br>";
+    }
+    document.getElementById('number').innerHTML=word;
+}
+</script>

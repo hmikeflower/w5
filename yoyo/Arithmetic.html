@@ -1,0 +1,29 @@
+請輸入運算方法(1是加法,2是減法,3是乘法,4是除法):<input type="text" id="symbol"><br>
+請輸入第一個數字:<input type="text" id="Nunber1"><br>
+請輸入第二個數字:<input type="text" id="Nunber2"><br>
+<button onclick="gettext()">開始運算</button>
+答案:<p id="answer"></p>
+<script>
+    var get=0;
+    function gettext(){
+        get=window.document.getElementById("symbol").value;
+        var a=window.document.getElementById("Nunber1").value,b=window.document.getElementById("Nunber2").value;
+        a=Number(a);
+        b=Number(b);
+        if(get==1){
+            window.document.getElementById('answer').innerHTML=a+b;
+        }
+        else if(get==2){
+            window.document.getElementById('answer').innerHTML=a-b;
+        }
+        else if(get==3){
+            window.document.getElementById('answer').innerHTML=a*b;
+        }
+        else if(get==4){
+            window.document.getElementById('answer').innerHTML=a/b;
+        }
+        else{
+            window.document.getElementById('answer').innerHTML=('無解');
+        }
+    }
+</script>
