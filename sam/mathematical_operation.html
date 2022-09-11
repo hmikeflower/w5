@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TaiwanSamYT-Mathematical Operation</title>
+    </head>
+    <body>
+        第一個數字:<input type="text" id="number1"><br>
+        第二個數字:<input type="text" id="number2"><br>
+        <button onclick='plus()'>加</button>
+        <button onclick='minus()'>減</button>
+        <button onclick='multiple()'>乘</button>
+        <button onclick='divide()'>除</button><br>
+        答案:<input type="text" id="output">
+        <script>
+            function plus(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)+Number(num2);}
+            function minus(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)-Number(num2);}
+            function multiple(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)*Number(num2);}
+            function divide(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)/Number(num2);}
+        </script>
+    </body>
+</html>
