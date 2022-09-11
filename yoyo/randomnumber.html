@@ -1,0 +1,10 @@
+亂數:<p id="p4"></p>
+範圍:<input type="text" id="range" value=""><br>
+<button onclick="getnumber()">產生亂數</button><br>
+    <script>
+    function getnumber(){
+        var a=document.getElementById('range').value;
+        a=Number(a);
+        document.getElementById('p4').innerHTML=Math.floor(Math.random()*a);
+    }
+</script>
