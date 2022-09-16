@@ -6,7 +6,7 @@
     </title>
     </head>
     <body>
-        <h1>定時器 setTimeout() 與  setIntervalTest（） </h1>
+        <h1>定時器 setTimeout() 與  setInterval（） </h1>
     </br>
         <h3>兩者最大差異爲執行次數。setTimeout() 爲一定時間後執行一次就結束；setInterval() 爲間隔一定時間，就會重複執行。</h3>
     </br>
@@ -18,7 +18,7 @@
     </br>
         setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数。</br>
 
-        <button onclick="test.stop()">STOP</button><p id="t1"></p></br>
+        <button onclick="stop()">STOP</button><p id="t1"></p></br>
     </br>
         提示： 1000 毫秒= 1 秒。</br>
     </br>
@@ -33,13 +33,24 @@
             <script>
                 
 
+                function tt(){
+                    console.log("hahaha")
+                }
+                
 
+                function stop(){
+                    clearInterval(x)
+                    console.log("123")
+                }
+                tt()
 
                 // 先測試 功能 確認這個物件功能正常可以使用
+                var x = setInterval('tt()',3000)
                 //第一個參數 一定要透過‘’ 改為字串 才會有正常功能 
                 
                 //測試setTimeout
-                
+                //setTimeout('console.log("hahaha")',3000)
+
                 //setInterval 如何關閉？ 直到 clearInterval() 被執行才會關閉，要先用一個變數 接 clearInterval,不然不知道要停下哪一個
                 
                 //練習1 配合 Date()不斷更新時間
