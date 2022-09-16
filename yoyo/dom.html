@@ -5,16 +5,10 @@
         html dom
     </title>
     </head>
-    <body>
-        <h1>Dom 物件介紹與使用</h1>
-        //認識內建的 window 物件 （HTML DOM 結構的最上層）</br>
-        
-        //取得視窗的寬度與高度</br>
-        <button onclick="domtest.show()">取得</button><p id="t1"></p></br>
-        //透過screen 物件取得螢幕尺寸</br>
-        //取得網址列內容</br>
-        //跳轉網頁</br>
+    <body
         </br>
+        <button onclick="dom.xddd()">取得</button><p id="1"></p></br>
+        <button onclick="dom.xdd()">網址</button><p id="2"></p></br>
             <script>
                 /*console.log(window.screen.height)
                 console.log(window.screen.width)
@@ -37,21 +31,29 @@
                 //更改網頁標題
                 //取得 Body 標籤
                 //更改網頁主畫面內容(bday 標籤的內文)
-
-
-
-            let domtest = new Object();
-                domtest.count=0
-                domtest.show=function(){
-                    if (this.count==0){
-                        document.getElementById("t1").innerHTML = "高度"+window.innerHeight+" 寬度"+window.innerWidth
-                        this.count=this.count+1;
+                var dom = new Object();
+                dom.number=0
+                dom.xddd=function(){
+                    if (this.number==0){
+                        document.getElementById("1").innerHTML = "高度:"+window.innerHeight+" 寬度:"+window.innerWidth
+                        this.number=this.number+1;
                     }
                     else {
-                        document.getElementById("t1").innerHTML = " ";
-                        this.count=0;
+                        document.getElementById("1").innerHTML = " ";
+                        this.number=0;
                     }
                 }
+                dom.xdd=function(){
+                    if (this.number==0){
+                        document.getElementById("2").innerHTML =location.href
+                        this.number=this.number+1;
+                    }
+                    else {
+                        document.getElementById("2").innerHTML = " ";
+                        this.number=0;
+                    }
+                }
+    
             </script>
     </body>
     </html>
