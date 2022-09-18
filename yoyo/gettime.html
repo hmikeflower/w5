@@ -1,11 +1,25 @@
 <p id="t"></p>
 <p id="time"></p>
 <script>
-var t = new Date();
-document.getElementById("t").innerHTML=t;
-var x=[new Date().getFullYear(),new Date().getMonth()+1,new Date().getDate(),new Date().getHours(),new Date().getMinutes(),new Date().getSeconds()],b=[],c=['年','月','日','時','分','秒'];
-for(var i=0;i<x.length;i++){
-    b=b+'現在是'+x[i]+c[i]+'<br>';
-    document.getElementById("time").innerHTML=b;
-}
+    var t = new Date();
+    function stop(){
+        clearInterval(x)}
+    </script>
+    <button onclick="stop()">停止</button>
+    <p id="1"></p>
+    <script>
+    function gettime(){
+        date=new Date()
+        var time1=[date.getFullYear(),date.getMonth()+1,date.getDate(),date.getHours(),date.getMinutes(),date.getSeconds()];
+        var time2=["年","月","日","時","分","秒"];
+        var y="現在是"+"<br>";
+        i=0;
+        while(i<time1.length){
+            y=y+time1[i]+time2[i];
+            if (i==0 || i==2){
+                y=y+"<br>"}
+                i++;}
+        document.getElementById("1").innerHTML=y;}
+        var x=setInterval('gettime()',10)
+        </script>
 </script>
