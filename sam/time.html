@@ -12,7 +12,11 @@
         <button onclick="stop()">停止</button>
         <p id="id"></p>
         <script>
+            var n=0;
             function GetDate(){
+                var bgcolor=["red","orange","yellow","lime","green","skyblue","blue","purple","white"]
+                document.body.style.backgroundColor = bgcolor[n%9];
+                n=n+1;
                 date=new Date()
                 var time_detail=[date.getFullYear(),date.getMonth()+1,date.getDate(),date.getHours(),date.getMinutes(),date.getSeconds()];
                 var time_format=["年","月","日","時","分","秒"];
