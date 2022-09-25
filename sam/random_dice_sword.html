@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TaiwanSamYT-Random Dice Sword</title>
+    </head>
+    <body>
+        <a href="http://hmikeflower.github.io/w5/sam/index.html"><button>回首頁</button></a><br>
+        Random Dice 計算聖劍骰子與月骰子的等級數對怪物的等比傷害<br>
+        月骰子<input type="text" id="moon_level">等<br>
+        聖劍骰子<input type="text" id="sword_level">等<br>
+        每秒的%傷::<div id="hurt_per_sec"></div>
+        <script>
+            setInterval('count()',100)
+            function count(){
+                document.getElementById("moon_level").value
+                document.getElementById("sword_level").value
+                document.getElementById("many_random_num_output").innerHTML=(0.991-(0.003*document.getElementById("sword_level").value))**((280/3)*((0.07*document.getElementById("moon_level").value)+1.77)*((0.005*document.getElementById("sword_level").value)+0.025))
+                ;}
+        </script>
+    </body>
+</html>
+
