@@ -18,7 +18,6 @@ function anim(DivId,text)
     { 
     
     msg="."+msg;
-    cnt=cnt+1;
     if (msg.length>40)
     msg=text;
     document.getElementById(DivId).innerHTML = msg
