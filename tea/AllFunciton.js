@@ -16,7 +16,7 @@ function TimeCom(DivId)
 
 function anim(DivId,text)
     { 
-    
+    var msg="@"
     msg="."+msg;
     if (msg.length>40)
     msg=text;
