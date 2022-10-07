@@ -30,3 +30,9 @@ function gettime(){
         }}
     document.getElementById("1").innerHTML=y;}
     var x=setInterval('gettime()',10)
+function website(){
+    location.href='http://hmikeflower.github.io/w5/yoyo.html'
+}
+function stop(x){
+    clearInterval(x)
+}
