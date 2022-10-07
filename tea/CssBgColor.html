@@ -5,13 +5,16 @@
     </title>
     </head>
     <body>
-        <button onclick="go()">STARE</button><p id="t1"></p>
+        <button onclick="go()">START</button><p id="t1"></p>
         <button onclick="stop(b)">STOP</button><p id="t1"></p>
         <script src="AllFunciton.js" type="text/javascript"></script>
         <script>
             var bgColor=["red","orange","yellow","lime","green","skyblue","blue","purple","white"]
             document.body.style.backgroundColor = bgColor[1]
             var b
+            
+            var t=setInterval('console.log("123")',100)
+            clearInterval(t)
             function go(){
                 b =setInterval('getRandom(9)',500)
             }
@@ -20,6 +23,7 @@
                 console.log(Math.floor(Math.random()*x))
                 document.body.style.backgroundColor = bgColor[Math.floor(Math.random()*x)]
                 };
+                
         </script>
         
         

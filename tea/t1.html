@@ -5,25 +5,13 @@
         setlnterval 練習
     </title>
     </head>
-    <body>
-        <button onclick="stop(a)">STOP</button><p id="t1"></p>
-        <button onclick="stop(b)">STOP$</button><p id="t1"></p>
-        <script src="AllFunciton.js" type="text/javascript"></script>
-
+    <body style="background-color:green;">
         <script>
-
-            var a = setInterval('TimeCom("time1")',500)
+            var bgco=["red","orange","yellow","lime","green","skyblue","blue","purple","white"]
+            window.document.body.style.backgroundColor=bgco[6]
             
+            console.log(Math.floor(Math.random()*10))
 
-
-            var msg ="@"
-            var b = setInterval('anim("ccc","@")',100)
-            
-            //第一個參數 一定要透過‘’ 改為字串 才會有正常功能 
         </script>
-        <h3>顯示時間與動畫</h3>
-        
-        <div id="time1"></div>
-        <div id="ccc"></div>
     </body>
     </html>
