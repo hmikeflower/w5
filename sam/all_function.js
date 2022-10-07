@@ -9,7 +9,11 @@ function GetDate(){
         i++;}
     document.getElementById("id").innerHTML=array_output;}
     
-
+    var n=0;
+    function changebgcolor(){
+        var bgcolor=["red","orange","yellow","lime","green","skyblue","blue","purple","white"]
+        document.body.style.backgroundColor = bgcolor[n%9];
+        n=n+1;}
 
 var word="$1";
 j=0;

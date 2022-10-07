@@ -4,13 +4,22 @@
         <title>TaiwanSamYT-CSS_BGcolor</title>
     </head>
     <body>
-        <hl id="cssbgcolor"></hl>
-        <script src="all_function.js" type="text/javascript"></script>
-        <p id="id"></p>
+        <button onclick="start()">START</button><br><br>
+        <button onclick="stop(a)">STOP</button>
         <script>
-            var x=setInterval('GetDate()',100)
+            var a;
+            function start(){
+                a=setInterval('changebgcolor()',10)}
 
-            var x=setInterval('animatoion()',50)
+
+            function stop(x){
+                clearInterval(x)}
+            
+            var n=0;
+            function changebgcolor(){
+                var bgcolor=["red","orange","yellow","lime","green","skyblue","blue","purple","white"]
+                document.body.style.backgroundColor = bgcolor[n%9];
+                n++;}
         </script>
     </body>
 </html>
