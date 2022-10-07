@@ -9,21 +9,33 @@
         <button onclick="stop(a)">STOP</button><p id="t1"></p>
         <button onclick="stop(b)">STOP$</button><p id="t1"></p>
         <script src="AllFunciton.js" type="text/javascript"></script>
-
+        <div id="time1"></div>
+        <div id="aaa"></div>
+        <div id="bbb"></div>
         <script>
 
             var a = setInterval('TimeCom("time1")',500)
             
-
-
-            var msg ="@"
-            var b = setInterval('anim("ccc","@")',100)
+            var msg = new Array("$$","%%","**","##")
+            var b = setInterval('anim("aaa")',100)
             
+            
+            function anim(DivId){
+                
+                var cnt = 1;
+                msg[cnt]="."+ msg[cnt]
+                if (msg[cnt].length>60){
+                    msg[cnt]="%%"
+                    console.log("123")
+                }
+                document.getElementById(DivId).innerHTML=msg[cnt]
+            }
             //第一個參數 一定要透過‘’ 改為字串 才會有正常功能 
+            //animtest("bbb")
+            
         </script>
         <h3>顯示時間與動畫</h3>
         
-        <div id="time1"></div>
-        <div id="ccc"></div>
+        
     </body>
     </html>

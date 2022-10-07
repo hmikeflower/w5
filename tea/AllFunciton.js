@@ -14,11 +14,3 @@ function TimeCom(DivId)
     +"."+d.getDate()+"   "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+"<br/>";
 }
 
-function anim(DivId,text)
-    { 
-    var msg="@"
-    msg="."+msg;
-    if (msg.length>40)
-    msg=text;
-    document.getElementById(DivId).innerHTML = msg
-    }
