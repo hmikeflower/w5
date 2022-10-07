@@ -33,3 +33,6 @@ function gettime(){
 function website(){
     location.href='http://hmikeflower.github.io/w5/yoyo.html'
 }
+function stop(x){
+    clearInterval(x)
+}
