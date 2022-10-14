@@ -7,12 +7,12 @@
     <button onclick="go()">START</button>
     <button onclick="stop(d)">STOP</button>
     <script>
-        var x=8,y=["red","orange","yellow","lime","green","skyblue","blue","purple","white"],d
+        var x=9,y=["red","orange","yellow","lime","green","skyblue","blue","purple","white"],d
         function go(){
             d=setInterval('bgcolor()',10)
         }
         function bgcolor(){
-            window.document.body.style.backgroundColor=y[Math.floor(Math.random()*x)]
+            window.document.body.style.backgroundColor=y[Math.floor(Math.random()*x)-1]
         }
     </script>
     </body>

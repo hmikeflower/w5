@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TaiwanSamYT-CSS_BGcolor</title>
+    </head>
+    <body>
+        <button onclick="start()">START</button><br><br>
+        <button onclick="stop(a)">STOP</button>
+        <script>
+            var a;
+            function start(){
+                a=setInterval('changebgcolor()',10)}
+
+
+            function stop(x){
+                clearInterval(x)}
+            
+            var n=0;
+            function changebgcolor(){
+                var bgcolor=["red","orange","yellow","lime","green","skyblue","blue","purple","white"]
+                document.body.style.backgroundColor = bgcolor[n%9];
+                n++;}
+        </script>
+    </body>
+</html>
+
