@@ -1,17 +1,37 @@
 <html>
     <head>
-        <title></title>
+        <meta charset="utf-8">
+        <title>四則運算</title>
     </head>
     <body>
-        <button onclick="location.href='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button><br>
-        <p id="d1"></p>
-        <p id="1"></p>
+        <a href="http://hmikeflower.github.io/w5/yoyo/index.html"><button>回首頁</button></a><br>
+        四則運算<br>
+        第一個數字:<input type="text" id="number1"><br>
+        第二個數字:<input type="text" id="number2"><br>
+        <button onclick='plus()'>加</button>
+        <button onclick='minus()'>減</button>
+        <button onclick='multiple()'>乘</button>
+        <button onclick='divide()'>除</button><br>
+        答案:<input type="text" id="output">
+        <script>
+            function plus(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)+Number(num2);}
+            function minus(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)-Number(num2);}
+            function multiple(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)*Number(num2);}
+            function divide(){
+                var num1=document.getElementById("number1").value;
+                var num2=document.getElementById("number2").value;
+                document.getElementById("output").value=Number(num1)/Number(num2);}
+            gettime()
+        </script>
         <script src="AllFunction.js" type='text/javascript'></script>
-<script>
-    var x=""
-    setInterval('xdd()',100)
-    gettime()
-</script>
-    
     </body>
 </html>
