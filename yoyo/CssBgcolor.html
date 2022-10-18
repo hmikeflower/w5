@@ -7,13 +7,13 @@
     <button onclick="go()">START</button>
     <button onclick="stop(d)">STOP</button>
     <script>
-        var x=9,y=["red","orange","yellow","lime","green","skyblue","blue","purple","white"],z=0,d
+        var x=0,y=["red","orange","yellow","lime","green","skyblue","blue","purple","white"],d
         function go(){
             d=setInterval('bgcolor()',10)
         }
         function bgcolor(){
-            window.document.body.style.backgroundColor=y[z%9]
-            z++
+            window.document.body.style.backgroundColor=y[x%9]
+            x++
         }
     </script>
     </body>
