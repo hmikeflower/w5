@@ -5,6 +5,34 @@
     <body>
     <script src="AllFunction.js" type='text/javascript'></script>
     <button onclick="location.href='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button>
-    <div id="Pic1" style="position:absolute;top:500;left:20"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"></div>
+    <div id="Pic1" style="position:absolute;top:100;left:0"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"><br>撞到邊界歸零</br></div>
+    <div id="Pic2" style="position:absolute;top:200;left:0"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"><br>撞到邊界反彈</br></div>
+    <script>
+        var position=5,x=0,y=0,n=0
+        position=document.getElementById('Pic1').style.left
+        function move(){
+            x=x+1
+            document.getElementById('Pic1').style.left=x
+            if(x==500){
+                x=0
+            }
+            
+            if(n==0){
+                if(y==500){
+                    n=1
+                }
+                y=y+1
+                document.getElementById('Pic2').style.left=y
+            }
+            if(n==1){
+                if(y==0){
+                    n=0
+                }
+                y=y-1
+                document.getElementById('Pic2').style.left=y
+            }
+        }
+        setInterval('move()',10)
+    </script>
     </body>
 </html>
