@@ -1,0 +1,36 @@
+<html>
+    <head>
+    <title>
+        PicMove 練習
+    </title>
+    </head>
+    <body>
+        <script src="AllFunciton.js" type="text/javascript"></script>
+        <h1>PIC TEST</h1>
+        <div id="Pic1"  style="position:absolute ;
+                                top:250;
+                                right:0;
+                                left: 0;
+                                width: 0px; 
+                                height: 0px;">
+            <img src='http://hmikeflower.github.io/w5/tea/pic1.png' width="50" height="30" ></div>
+            <script>
+                var PicPosition =5
+                var cnt=0
+                PicPosition = document.getElementById("Pic1").style.left
+                //var x = setInterval('getPosition()',50)
+                
+
+                
+        function getPosition(){
+                cnt=cnt+1
+                document.getElementById("Pic1").style.left=cnt
+                console.log(cnt)
+        }   
+    </script>
+        
+        
+        
+        
+    </body>
+    </html>
