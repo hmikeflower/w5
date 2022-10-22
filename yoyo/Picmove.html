@@ -5,24 +5,27 @@
     <body>
     <script src="AllFunction.js" type='text/javascript'></script>
     <button onclick="location.href='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button>
-    <div id="Pic1" style="position:absolute;top:100;left:0"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"><br>撞到邊界歸零</br></div>
-    <div id="Pic2" style="position:absolute;top:200;left:0"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"><br>撞到邊界反彈</br></div>
+    <div id="Pic1" style="position:absolute;top:100;left:0"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"><br>向左撞到邊界(300)歸零</br></div>
+    <div id="Pic2" style="position:absolute;top:200;left:0"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"><br>向左撞到邊界(300)反彈</br></div>
+    <div id="Pic3" style="position:absolute;top:300;left:0"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"><br>向下撞到邊界(300)反彈</br></div>
+    <div id="Pic4" style="position:absolute;top:300;left:200"><img src='http://hmikeflower.github.io/w5/yoyo/pic.png' width="50" height="50"><br>向下撞到邊界(300)反彈</br></div>
     <script>
-        var position=5,x=0,y=0,n=0
-        position=document.getElementById('Pic1').style.left
+        var x=0,y=0,n=0
         function move(){
             x=x+1
             document.getElementById('Pic1').style.left=x
-            if(x==500){
+            document.getElementById('Pic3').style.top=x+300
+            if(x==301){
                 x=0
             }
             
             if(n==0){
-                if(y==500){
+                if(y==300){
                     n=1
                 }
                 y=y+1
                 document.getElementById('Pic2').style.left=y
+                document.getElementById('Pic4').style.top=y+300
             }
             if(n==1){
                 if(y==0){
@@ -30,6 +33,7 @@
                 }
                 y=y-1
                 document.getElementById('Pic2').style.left=y
+                document.getElementById('Pic4').style.top=y+300
             }
         }
         setInterval('move()',10)
