@@ -7,10 +7,11 @@
     <body>
         <button onclick="location.href='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button>
         <script>
-            x=0;
-            y=0;
+            x=300;
+            y=300;
             function moveup(){
-                y=y-10;
+                if (y>0){
+                    y=y-10;}
                 document.getElementById('Pic1').style.top=y;}
 
             function movedown(){
@@ -18,15 +19,18 @@
                 document.getElementById('Pic1').style.top=y;}
 
             function moveleft(){
-                x=x-10;
+                if (x>0){
+                    x=x-10;}
                 document.getElementById('Pic1').style.left=x;}
 
             function moveright(){
                 x=x+10;
                 document.getElementById('Pic1').style.left=x;}
             function moveback(){
-                document.getElementById('Pic1').style.left=300;
-                document.getElementById('Pic1').style.top=300;}
+                x=300;
+                y=300;
+                document.getElementById('Pic1').style.left=x;
+                document.getElementById('Pic1').style.top=y;}
         </script>
         
         <button onclick="moveup()">上</button>
