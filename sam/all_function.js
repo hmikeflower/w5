@@ -47,8 +47,8 @@ function moveleft(r){
 function moveright(r){
     x=x+r;
     document.getElementById('Pic1').style.left=x;}
-function moveback(){
-    x=300;
-    y=300;
+function moveback(r1,r2){
+    x=r1;
+    y=r2;
     document.getElementById('Pic1').style.left=x;
     document.getElementById('Pic1').style.top=y;}
