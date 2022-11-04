@@ -6,7 +6,25 @@
     </head>
     <body>
         <button onclick="location.href='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button>
+        <script>
+            x=0;
+            y=0;
+            function moveup(){
+                y=y-1;
+                document.getElementById('Pic1').style.top=y;}
 
+            function movedown(){
+                y=y+1;
+                document.getElementById('Pic1').style.top=y;}
+
+            function moveleft(){
+                x=x-1;
+                document.getElementById('Pic1').style.left=x;}
+
+            function moveright(){
+                x=x+1;
+                document.getElementById('Pic1').style.left=x;}
+        </script>
         
         <button onclick="moveup()">上</button>
         <button onclick="movedown()">下</button>
