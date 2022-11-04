@@ -25,3 +25,30 @@ function animatoion(){
         word="$1";}
     document.getElementById("animation").innerHTML=word;
 }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+x=300;
+y=300;
+function moveup(r){
+    if (y>0){
+        y=y-r;}
+    document.getElementById('Pic1').style.top=y;}
+
+function movedown(r){
+    y=y+r;
+    document.getElementById('Pic1').style.top=y;}
+
+function moveleft(r){
+    if (x>0){
+        x=x-r;}
+    document.getElementById('Pic1').style.left=x;}
+
+function moveright(r){
+    x=x+r;
+    document.getElementById('Pic1').style.left=x;}
+function moveback(r1,r2){
+    x=r1;
+    y=r2;
+    document.getElementById('Pic1').style.left=x;
+    document.getElementById('Pic1').style.top=y;}
