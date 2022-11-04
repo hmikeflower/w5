@@ -10,29 +10,33 @@
             x=0;
             y=0;
             function moveup(){
-                y=y-1;
+                y=y-10;
                 document.getElementById('Pic1').style.top=y;}
 
             function movedown(){
-                y=y+1;
+                y=y+10;
                 document.getElementById('Pic1').style.top=y;}
 
             function moveleft(){
-                x=x-1;
+                x=x-10;
                 document.getElementById('Pic1').style.left=x;}
 
             function moveright(){
-                x=x+1;
+                x=x+10;
                 document.getElementById('Pic1').style.left=x;}
+            function moveback(){
+                document.getElementById('Pic1').style.left=300;
+                document.getElementById('Pic1').style.top=300;}
         </script>
         
         <button onclick="moveup()">上</button>
         <button onclick="movedown()">下</button>
         <button onclick="moveleft()">左</button>
         <button onclick="moveright()">右</button>
+        <button onclick="moveback()">原位</button>
 
         
-        <div id="Pic1" style="position:absolute;top:100;left:0"><img src='http://hmikeflower.github.io/w5/sam/pictures/picture.png' width="50" height="50"></div>
+        <div id="Pic1" style="position:absolute;top:300;left:300"><img src='http://hmikeflower.github.io/w5/sam/pictures/picture.png' width="50" height="50"></div>
 
     </body>
 </html>
