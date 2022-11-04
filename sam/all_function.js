@@ -25,3 +25,22 @@ function animatoion(){
         word="$1";}
     document.getElementById("animation").innerHTML=word;
 }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
+function moveup(){
+    y=y-1;
+    document.getElementById('Pic1').style.top=y;}
+
+function movedown(){
+    y=y+1;
+    document.getElementById('Pic1').style.top=y;}
+
+function moveleft(){
+    x=x-1;
+    document.getElementById('Pic1').style.left=x;}
+
+    function moveright(){
+        x=x+1;
+        document.getElementById('Pic1').style.left=x;}
