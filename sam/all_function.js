@@ -28,7 +28,8 @@ function animatoion(){
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-
+x=0;
+y=0;
 function moveup(){
     y=y-1;
     document.getElementById('Pic1').style.top=y;}
@@ -41,6 +42,6 @@ function moveleft(){
     x=x-1;
     document.getElementById('Pic1').style.left=x;}
 
-    function moveright(){
-        x=x+1;
-        document.getElementById('Pic1').style.left=x;}
+function moveright(){
+    x=x+1;
+    document.getElementById('Pic1').style.left=x;}
