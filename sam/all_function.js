@@ -28,20 +28,27 @@ function animatoion(){
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-x=0;
-y=0;
-function moveup(){
-    y=y-1;
+x=300;
+y=300;
+function moveup(r){
+    if (y>0){
+        y=y-r;}
     document.getElementById('Pic1').style.top=y;}
 
-function movedown(){
-    y=y+1;
+function movedown(r){
+    y=y+r;
     document.getElementById('Pic1').style.top=y;}
 
-function moveleft(){
-    x=x-1;
+function moveleft(r){
+    if (x>0){
+        x=x-r;}
     document.getElementById('Pic1').style.left=x;}
 
-function moveright(){
-    x=x+1;
+function moveright(r){
+    x=x+r;
     document.getElementById('Pic1').style.left=x;}
+function moveback(){
+    x=300;
+    y=300;
+    document.getElementById('Pic1').style.left=x;
+    document.getElementById('Pic1').style.top=y;}
