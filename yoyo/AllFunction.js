@@ -63,3 +63,6 @@ function zero(p,s){
     document.getElementById('Pic1').style.top=p
     document.getElementById('Pic1').style.left=s
 }
+function big(a){
+    document.getElementById('Pic1').style.width=a
+}
