@@ -28,38 +28,37 @@ function animatoion(){
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-x=300;
-y=300;
-s=50;
+picx=300;
+picy=300;
+picsize=50;
 function moveup(r){
     if (y>0){
-        y=y-r;}
-    document.getElementById('Pic1').style.top=y;}
+        picy=picy-r;}
+    document.getElementById('Pic1').style.top=picy;}
 
 function movedown(r){
-    y=y+r;
-    document.getElementById('Pic1').style.top=y;}
+    picy=picy+r;
+    document.getElementById('Pic1').style.top=picy;}
 
 function moveleft(r){
     if (x>0){
-        x=x-r;}
-    document.getElementById('Pic1').style.left=x;}
+        picx=picx-r;}
+    document.getElementById('Pic1').style.left=picx;}
 
 function moveright(r){
-    x=x+r;
-    document.getElementById('Pic1').style.left=x;}
-function moveback(r1,r2){
-    x=r1;
-    y=r2;
-    document.getElementById('Pic1').style.left=x;
-    document.getElementById('Pic1').style.top=y;}
+    picx=picx+r;
+    document.getElementById('Pic1').style.left=picx;}
+function moveback(r1,r2,size){
+    picx=r1;
+    picy=r2;
+    picsize=size;
+    document.getElementById('Pic1').style.left=picx;
+    document.getElementById('Pic1').style.top=picy;
+    document.getElementById('Pic1').style.width=picsize;}
 
 function big(c){
     s=s+c
-    document.getElementById('Pic1').style.width=s
-    console.log(s)
-}
-    
+    document.getElementById('Pic1').style.width=s}
 
 function small(c){
     s=s-c
