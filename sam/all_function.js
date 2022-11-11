@@ -56,10 +56,10 @@ function moveback(r1,r2,size){
     document.getElementById('Pic1').style.top=picy;
     document.getElementById('Pic1').style.width=picsize;}
 
-function big(r){
-    picsize=picsize+r
-    document.getElementById('Pic1').style.width=picsize}
+function big(c){
+    s=s+c
+    document.getElementById('Pic1').style.width=s}
 
-function small(r){
-    picsize=picsize-r
-    document.getElementById('Pic1').style.width=picsize}
+function small(c){
+    s=s-c
+    document.getElementById('Pic1').style.width=s}
