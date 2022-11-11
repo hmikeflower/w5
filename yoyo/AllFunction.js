@@ -10,7 +10,7 @@ function xdd(){
     }
 }
 function gettime(){
-    var n=0,m=0
+    var n=0
     date=new Date()
     var bgcolor=["red","orange","yellow","lime","green","skyblue","blue","purple","white"]
     var time1=[date.getFullYear(),date.getMonth()+1,date.getDate(),date.getHours(),date.getMinutes(),date.getSeconds()];
@@ -37,7 +37,7 @@ function website(){
 function stop(c){
     clearInterval(c)
 }
-x=300,y=550
+x=300,y=550,s=50
 function up(r){
     if(x==0){
         x=r
@@ -63,8 +63,18 @@ function right(r){
 function zero(p,s){
     document.getElementById('Pic1').style.top=p
     document.getElementById('Pic1').style.left=s
+    document.getElementById('Pic1').style.width=50
 }
 function big(a){
+<<<<<<< HEAD
+    s=s+a
+    document.getElementById('Pic1').style.width=s
+}
+function small(a){
+    s=s-a
+    document.getElementById('Pic1').style.width=s
+=======
     document.getElementById('Pic1').style.width=a
     console.log(a)
+>>>>>>> ea520e1c62a9e0d31adc617ec632f2ca66a13bd8
 }
