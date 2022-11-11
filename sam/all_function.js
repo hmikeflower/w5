@@ -56,7 +56,10 @@ function moveback(r1,r2){
 
 function big(c){
     s=s+c
-    document.getElementById('Pic1').style.width=s}
+    document.getElementById('Pic1').style.width=s
+    console.log(s)
+}
+    
 
 function small(c){
     s=s-c
