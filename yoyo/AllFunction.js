@@ -28,8 +28,9 @@ function gettime(){
         if(n==9){
             n=0
         }}
-    document.getElementById("1").innerHTML=y;}
-    var x=setInterval('gettime()',10)
+    //document.getElementById("1").innerHTML=y;}
+    //var x=setInterval('gettime()',10)
+}
 function website(){
     location.href='http://hmikeflower.github.io/w5/yoyo.html'
 }
@@ -65,4 +66,5 @@ function zero(p,s){
 }
 function big(a){
     document.getElementById('Pic1').style.width=a
+    console.log(a)
 }
