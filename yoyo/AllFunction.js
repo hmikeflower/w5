@@ -28,8 +28,9 @@ function gettime(){
         if(n==9){
             n=0
         }}
-    document.getElementById("1").innerHTML=y;}
-    var x=setInterval('gettime()',10)
+    //document.getElementById("1").innerHTML=y;}
+    //var x=setInterval('gettime()',10)
+}
 function website(){
     location.href='http://hmikeflower.github.io/w5/yoyo.html'
 }
@@ -65,10 +66,15 @@ function zero(p,s){
     document.getElementById('Pic1').style.width=50
 }
 function big(a){
+<<<<<<< HEAD
     s=s+a
     document.getElementById('Pic1').style.width=s
 }
 function small(a){
     s=s-a
     document.getElementById('Pic1').style.width=s
+=======
+    document.getElementById('Pic1').style.width=a
+    console.log(a)
+>>>>>>> ea520e1c62a9e0d31adc617ec632f2ca66a13bd8
 }

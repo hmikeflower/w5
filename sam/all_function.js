@@ -30,6 +30,7 @@ function animatoion(){
 
 x=300;
 y=300;
+s=50;
 function moveup(r){
     if (y>0){
         y=y-r;}
@@ -52,3 +53,14 @@ function moveback(r1,r2){
     y=r2;
     document.getElementById('Pic1').style.left=x;
     document.getElementById('Pic1').style.top=y;}
+
+function big(c){
+    s=s+c
+    document.getElementById('Pic1').style.width=s
+    console.log(s)
+}
+    
+
+function small(c){
+    s=s-c
+    document.getElementById('Pic1').style.width=s}
