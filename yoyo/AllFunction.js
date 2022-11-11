@@ -66,15 +66,10 @@ function zero(p,s){
     document.getElementById('Pic1').style.width=50
 }
 function big(a){
-<<<<<<< HEAD
     s=s+a
     document.getElementById('Pic1').style.width=s
 }
 function small(a){
     s=s-a
     document.getElementById('Pic1').style.width=s
-=======
-    document.getElementById('Pic1').style.width=a
-    console.log(a)
->>>>>>> ea520e1c62a9e0d31adc617ec632f2ca66a13bd8
 }
