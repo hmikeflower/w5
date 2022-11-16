@@ -14,7 +14,7 @@ function TimeCom(DivId)
     +"."+d.getDate()+"   "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+"<br/>";
 }
 
-picx=300,picy=550,picWidth=150;PicMode=0
+picx=300,picy=50,picWidth=150;PicMode=0
 function up(r){
     if(picx==0){
         picx=r
@@ -64,3 +64,7 @@ function change(){
         }
 }
 
+function test(){
+    console.log(1)
+
+}
