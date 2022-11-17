@@ -6,3 +6,10 @@ color: aquamarine;
     font: size 40px;
     color: rgb(0, 4, 255);
     }
+.img{
+    border: width 30px;
+    border-style:dashed;
+    border-color:#1400f6;
+    padding:3px;
+        
+}
