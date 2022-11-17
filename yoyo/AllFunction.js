@@ -74,14 +74,15 @@ function small(a){
     document.getElementById('Pic1').style.width=s
 }
 function change(){
+    pic=0
     pic=(pic+1)%3
     if(pic==0){
-        document.getElementById('Pic1').src='http://hmikeflower.github.io/w5/yoyo/p1.png';
+        document.getElementById('P1').src='http://hmikeflower.github.io/w5/yoyo/p1.png';
     }
     if(pic==1){
-        document.getElementById('Pic1').src='http://hmikeflower.github.io/w5/yoyo/p2.png';
+        document.getElementById('P1').src='http://hmikeflower.github.io/w5/yoyo/p2.png';
     }
     if(pic==2){
-        document.getElementById('Pic1').src='http://hmikeflower.github.io/w5/yoyo/p3.png';
+        document.getElementById('P1').src='http://hmikeflower.github.io/w5/yoyo/p3.png';
     }
 }
