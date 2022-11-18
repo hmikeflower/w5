@@ -73,7 +73,7 @@ function small(a){
     document.getElementById('Pic1').style.width=s
 }
 function change(){
-        document.getElementById('Pic1').src='http://hmikeflower.github.io/w5/yoyo/p1.png';
+    document.getElementById('Pic1').src='http://hmikeflower.github.io/w5/yoyo/p1.png';
         
 }
 keyx=500,keyy=550
