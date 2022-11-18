@@ -71,7 +71,7 @@ function change(){
     if(pic==1){
         document.getElementById("Pic1").src='http://hmikeflower.github.io/w5/yoyo/p3.png';}}
 
-        keyx=500,keyy=550
+        keyx=300,keyy=300
         function keyright(r){
             keyy=keyy+r
             document.getElementById('Pic1').style.left=keyy

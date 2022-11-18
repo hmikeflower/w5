@@ -22,5 +22,19 @@
         <div id="Pic2" class="border"><img src='http://hmikeflower.github.io/w5/sam/pictures/perfect1.png' width="100%"></div>
         <div id="Pic3" class="border"><img src='http://hmikeflower.github.io/w5/sam/pictures/perfect2.png' width="100%"></div>
         <div id="Pic4" class="border"><img src='http://hmikeflower.github.io/w5/sam/pictures/perfect3.png' width="100%"></div>
+        
+        <script>
+            window.addEventListener('keydown', function(e){
+                var keyID = e.code;
+            if(keyID === 'KeyW')  {
+                keyup(5);}
+            if(keyID === 'KeyA')  {
+                keyleft(5);}
+            if(keyID === 'KeyS')  {
+                keydown(5);}
+            if(keyID === 'KeyD')  {
+                keyright(5);}})
+        </script>
+    
     </body>
 </html>
