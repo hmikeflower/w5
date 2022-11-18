@@ -63,3 +63,10 @@ function big(c){
 function small(c){
     s=s-c
     document.getElementById('Pic1').style.width=s}
+
+function change(){
+    pic=(pic+1)%2
+    if(pic==0){
+        document.getElementById("Pic1").src='http://hmikeflower.github.io/w5/yoyo/p2.png';}
+    if(pic==1){
+        document.getElementById("Pic1").src='http://hmikeflower.github.io/w5/yoyo/p3.png';}}
