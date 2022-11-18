@@ -5,3 +5,8 @@
 .style2{
     font-size:100px;
     color:green;}
+
+.border{
+    border-style: double;
+    border-width: 10px;
+    border-color: lime;}

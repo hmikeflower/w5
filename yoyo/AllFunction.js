@@ -73,13 +73,8 @@ function small(a){
     document.getElementById('Pic1').style.width=s
 }
 function change(){
-    pic=(pic+1)%2
-    if(pic==0){
-        document.getElementById("P1").src='http://hmikeflower.github.io/w5/yoyo/p2.png';
-    }
-    if(pic==1){
-        document.getElementById("P1").src='http://hmikeflower.github.io/w5/yoyo/p3.png';
-        }
+        document.getElementById('Pic1').src='http://hmikeflower.github.io/w5/yoyo/p1.png';
+        
 }
 keyx=500,keyy=550
 function keyright(r){

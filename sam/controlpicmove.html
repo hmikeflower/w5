@@ -14,9 +14,27 @@
         <button onclick="moveback(300,300,50)">原位</button>
         <button onclick="big(5)">變大</button>
         <button onclick="small(5)">變小</button>
+        <button onclick="change()">換</button>
 
         
         <div id="Pic1" style="position:absolute;top:300;left:300;width:50;"><img src='http://hmikeflower.github.io/w5/sam/pictures/picture.png' width="100%"></div>
-
+        
+        <div id="Pic2" class="border"><img src='http://hmikeflower.github.io/w5/sam/pictures/perfect1.png' width="100%"></div>
+        <div id="Pic3" class="border"><img src='http://hmikeflower.github.io/w5/sam/pictures/perfect2.png' width="100%"></div>
+        <div id="Pic4" class="border"><img src='http://hmikeflower.github.io/w5/sam/pictures/perfect3.png' width="100%"></div>
+        
+        <script>
+            window.addEventListener('keydown', function(e){
+                var keyID = e.code;
+            if(keyID === 'KeyW')  {
+                keyup(5);}
+            if(keyID === 'KeyA')  {
+                keyleft(5);}
+            if(keyID === 'KeyS')  {
+                keydown(5);}
+            if(keyID === 'KeyD')  {
+                keyright(5);}})
+        </script>
+    
     </body>
 </html>
