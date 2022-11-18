@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <script src="all_function.js" type="text/javascript"></script>
+    </head>
+    <body>
+        KEYDOWN無法區分大小寫 要ASCII才能區分<br>
+        <div class="style1"><button onclick="location.href='http://hmikeflower.github.io/w5/sam/index.html'">回首頁</button></div>
+        <div id="word"></div>
+
+        <input type="text" id="key"><br>
+
+        <script>
+            document.onkeydown=function(){
+                var a="code="+event.code+" keycode="+event.keyCode;
+                document.getElementById("word").innerHTML=a;}
+
+            key.onkeydown=function(){
+                if(event.keyCode<48||event.keyCode>57){
+                    return false;}
+                else{
+                    return true;}
+            }
+        </script>
+    
+    </body>
+</html>
