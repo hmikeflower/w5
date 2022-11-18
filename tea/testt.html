@@ -10,37 +10,55 @@
     <body>
         <h1>鍵盤事件使用與測試</h1>
         請按下 任何一個按鍵</br>
+        keyDown 時無法區分英文大小寫</br>
+        需使用 keypress 才能區分</br>
         <div id="Pic1" class="img"><img src='http://hmikeflower.github.io/w5/tea/p1.png'width="100%" height="100%"></div>
         <div id="divtest"></div>
         <input type="text" id = "text1" size="50">
         </br>限制只能輸入 數字 0~9</br>
         <input type="text" id = "text2" size="50">
-        </br>限制只能輸入 英文小寫</br>
+        </br>限制只能輸入 英文</br>
         <input type="text" id = "text3" size="50">
         </br>限制只能輸入 英文大寫</br>
         <input type="text" id = "text4" size="50">
-        </br>限制只能輸入 英文大小寫</br>
+        </br>限制只能輸入 英文小寫</br>
         <input type="text" id = "text5" size="50">
         <script>
-            /*
+            
             // 按下鍵盤的任一按鈕 都會觸發一個事件，讓這個事件 發出一個1
-            document.onkeydown = function(){
-               console.log("1"); 
-            }
-            */
+            //document.onkeydown = function(){
+            //   console.log(event); 
+            //}
+            
 
             /*
             //按下按鈕後 可以到 網頁看到 event 的詳細內容，主要要看、code  keyCode
             document.onkeydown = function(){
-               console.log(event);
-               console.log(event.code)
-               console.log(event.keyCode)
+                console.log(event);
+                console.log(event.code)
+                console.log(event.keyCode)
             }*/
+            
+            document.onkeypress = function(){
+                console.log(event);
+            var a = "code= "+event.code+"   keyCode= "+event.keyCode; 
+            document.getElementById("divtest").innerHTML=a;
+            }
+            
+            
+            /*text1.onkeydown = function(){
+
+                return false
+            }*/
+
+
+            
 
             /*
             //小任務 按下按鈕後 在畫面上 顯示 code  keyCode
             document.onkeydown = function(){
-            var a = "code= "+event.code+"   ketCode= "+event.keyCode; 
+                console.log(event);
+            var a = "code= "+event.code+"   keyCode= "+event.keyCode; 
             document.getElementById("divtest").innerHTML=a;
             }*/
 
