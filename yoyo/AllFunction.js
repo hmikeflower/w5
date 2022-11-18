@@ -74,15 +74,34 @@ function small(a){
     document.getElementById('Pic1').style.width=s
 }
 function change(){
-    pic=0
-    pic=(pic+1)%3
+    pic=(pic+1)%2
     if(pic==0){
-        document.getElementById('P1').src='http://hmikeflower.github.io/w5/yoyo/p1.png';
+        document.getElementById("P1").src='http://hmikeflower.github.io/w5/yoyo/p2.png';
     }
     if(pic==1){
-        document.getElementById('P1').src='http://hmikeflower.github.io/w5/yoyo/p2.png';
+        document.getElementById("P1").src='http://hmikeflower.github.io/w5/yoyo/p3.png';
+        }
+}
+keyx=500,keyy=550
+function keyright(r){
+    keyy=keyy+r
+    document.getElementById('Pic2').style.left=keyy
+}
+function keydown(r){
+    keyx=keyx+r
+    document.getElementById('Pic2').style.top=keyx
+}
+function keyup(r){
+    if(keyx==0){
+        keyx=r
     }
-    if(pic==2){
-        document.getElementById('P1').src='http://hmikeflower.github.io/w5/yoyo/p3.png';
+    keyx=keyx-r
+    document.getElementById('Pic2').style.top=keyx
+}
+function keyleft(r){
+    if(keyy==0){
+        keyy=r
     }
+    keyy=keyy-r
+    document.getElementById('Pic2').style.left=keyy
 }
