@@ -57,12 +57,12 @@ function moveback(r1,r2,size){
     document.getElementById('Pic1').style.width=picsize;}
 
 function big(c){
-    s=s+c
-    document.getElementById('Pic1').style.width=s}
+    picsize=picsize+c
+    document.getElementById('Pic1').style.width=picsize}
 
 function small(c){
-    s=s-c
-    document.getElementById('Pic1').style.width=s}
+    picsize=picsize-c
+    document.getElementById('Pic1').style.width=picsize}
 
 function change(){
     pic=(pic+1)%2
@@ -70,3 +70,27 @@ function change(){
         document.getElementById("Pic1").src='http://hmikeflower.github.io/w5/yoyo/p2.png';}
     if(pic==1){
         document.getElementById("Pic1").src='http://hmikeflower.github.io/w5/yoyo/p3.png';}}
+
+        keyx=500,keyy=550
+        function keyright(r){
+            keyy=keyy+r
+            document.getElementById('Pic1').style.left=keyy
+        }
+        function keydown(r){
+            keyx=keyx+r
+            document.getElementById('Pic1').style.top=keyx
+        }
+        function keyup(r){
+            if(keyx==0){
+                keyx=r
+            }
+            keyx=keyx-r
+            document.getElementById('Pic1').style.top=keyx
+        }
+        function keyleft(r){
+            if(keyy==0){
+                keyy=r
+            }
+            keyy=keyy-r
+            document.getElementById('Pic1').style.left=keyy
+        }
