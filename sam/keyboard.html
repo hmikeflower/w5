@@ -11,8 +11,21 @@
 
         <input type="text" id="key"><br>
 
+
+
+        限制只能輸入 數字 0~9<br>
+    <input type="text" id ="text" size="100"><br>
+    限制只能輸入 英文<br>
+    <input type="text" id = "text1" size="100"><br>
+    限制只能輸入 英文大寫<br>
+    <input type="text" id = "text2" size="100"><br>
+    限制只能輸入 英文小寫<br>
+    <input type="text" id = "text3" size="100"><br>
+
+
+
         <script>
-            document.onkeydown=function(){
+            document.onkeypress=function(){
                 var a="code="+event.code+" keycode="+event.keyCode;
                 document.getElementById("word").innerHTML=a;}
 
@@ -20,8 +33,31 @@
                 if(event.keyCode<48||event.keyCode>57){
                     return false;}
                 else{
-                    return true;}
-            }
+                    return true;}}
+                
+            document.onkeydown = function(){
+                var x="code="+event.code+" keyCode="+event.keyCode; 
+                document.getElementById("test").innerHTML=x;}
+            
+            document.onkeypress = function(){
+                var y="code="+event.code+" keyCode="+event.keyCode; 
+                document.getElementById("test1").innerHTML=y;}
+
+            text.onkeydown=function(){
+                if(event.keyCode<48||event.keyCode>57){
+                    return false;}}
+
+            text1.onkeydown=function(){
+                if(event.keyCode<65||event.keyCode>90){
+                    return false;}}
+
+            text2.onkeypress=function(){
+                if(event.keyCode<65||event.keyCode>90){
+                    return false;}}
+
+            text3.onkeypress=function(){
+                if(event.keyCode<97||event.keyCode>112){
+                    return false;}}
         </script>
     
     </body>
