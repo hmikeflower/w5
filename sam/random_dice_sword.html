@@ -24,7 +24,7 @@
                 else if (document.getElementById("sword_level").value>15){
                     document.getElementById("hurt_per_sec").innerHTML="聖劍骰子等級數不高於15";}
                 else{
-                    document.getElementById("hurt_per_sec").innerHTML=(0.991-(0.003*document.getElementById("sword_level").value))**((280/3)*((0.07*document.getElementById("moon_level").value)+1.77)*((0.005*document.getElementById("sword_level").value)+0.025));}}
+                    document.getElementById("hurt_per_sec").innerHTML=(0.991-(0.003*document.getElementById("sword_level").value))**((280/3)*((1.11+0.01*document.getElementById("moon_level").value)**7)*((0.005*document.getElementById("sword_level").value)+0.025));}}
         </script>
     </body>
 </html>
