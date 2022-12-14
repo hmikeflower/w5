@@ -1,11 +1,12 @@
 <html>
     <head>
-        <script src="AllFunciton.js" type="text/javascript"></script>
+        
     <title>
         wro 2021
     </title>
     </head>
     <body>
+        
         <style type="text/css">
         #P1{
             position:absolute;
@@ -27,19 +28,85 @@
         }
         #P4{
             position:absolute;
-            top:125px;
+            top:120px;
+            left:220px;
+            z-index:1;
+        }
+        #P5{
+            position:absolute;
+            top:170px;
+            left:220px;
+            z-index:1;
+        }
+        #P6{
+            position:absolute;
+            top:225px;
+            left:220px;
+            z-index:1;
+        }
+        #P7{
+            position:absolute;
+            top:275px;
             left:220px;
             z-index:1;
         }
         </style>
+        <h1>WRO 2021 出題機 </h1>
+        <button onclick="movecar()">movecar</button>
+        <button onclick="rand()">test</button>
+        </br>
+        </br>
         <div style="position:relative;">
             <img src="wro.jpeg" id="P1">
             <img src="2.png" id="P2">
             <img src="3.png" id="P3">
             <img src="4.png" id="P4">
+            <img src="2.png" id="P5">
+            <img src="3.png" id="P6">
+            <img src="4.png" id="P7">
             </div>
         
+        <script>
+            var y = 5
+            var x="P"+y;
+            let CarPicArr = ["2.png","3.png","4.png","2.png","3.png","4.png"]
+            let CarPosArr = [15,370,120,170,225,275]
+        function movecar()
+            {
+            //document.getElementById("P7").src="3.png"
+            //Math.floor(Math.random()* CarArr.length)
+            document.getElementById(x).src=CarPicArr[1];
+            document.getElementById(x).style.top=CarPosArr[1];
+            }
+
+        function rand()
+        {
+            
+            var arrNum=[];
+            var ranNum = 6;
+            var text="";
+            for(var i = 0; i < ranNum; i++) {
+                arrNum[i] = Math.floor(Math.random() * ranNum);
+                if(i>0){
+                for(var k=0;k<i;k++){
+                    if(arrNum[k] == arrNum[i]) {
+                        i--;
+                        break;
+                    }
+                }
+                }
+            }
+
+            for (var j = 0; j < arrNum.length; j++) {
+            text += arrNum[j] + ".";
+                }
+            console.log(text)
+        }
+
         
+
+        
+        </script>
         
     </body>
     </html>
