@@ -67,21 +67,10 @@
             </div>
         
         <script>
-            var y = 5
-            var x="P"+y;
-            let CarPicArr = ["2.png","3.png","4.png","2.png","3.png","4.png"]
-            let CarPosArr = [15,370,120,170,225,275]
-        function movecar()
-            {
-            //document.getElementById("P7").src="3.png"
-            //Math.floor(Math.random()* CarArr.length)
-            document.getElementById(x).src=CarPicArr[1];
-            document.getElementById(x).style.top=CarPosArr[1];
-            }
+            movecar() //先執行一次 讓每次進來的圖片不同
 
-        function rand()
-        {
-            
+        function movecar()
+        {   // 先建立一個 0~6  不重複的array  arrNum
             var arrNum=[];
             var ranNum = 6;
             var text="";
@@ -96,13 +85,26 @@
                 }
                 }
             }
-
+            //建立一個 放入圖片檔案的 array
+            let CarPicArr = ["2.png","3.png","4.png","2.png","3.png","4.png"]
+            var y =2;
             for (var j = 0; j < arrNum.length; j++) {
-            text += arrNum[j] + ".";
-                }
-            console.log(text)
+                text += arrNum[j] + ".";
+                x="P"+y;
+                y++;
+                document.getElementById(x).src=CarPicArr[arrNum[j]];
+                    }
         }
 
+
+
+        function test()
+            {
+            //document.getElementById("P7").src="3.png"
+            //Math.floor(Math.random()* CarArr.length)
+            document.getElementById(x).src=CarPicArr[1];
+            document.getElementById(x).style.top=CarPosArr[1];
+            }
         
 
         
