@@ -145,14 +145,37 @@
         <div style="position:relative;">
             <img src="pictures/2021WRO/底圖.jpg" id="background">
             <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
             <img src="pictures/2021WRO/REDCAR.png" id="CAR-X1Y1">
             <img src="pictures/2021WRO/BAR.png" id="BAR-X1Y1">
         </div>
 
         <script>
             function random(){
-                document.getElementById("PARKINGCAR-Y1").src="BAR.png"}
-            random()
+                i=0;
+                var array=[];
+                var pass=true;
+                
+                while(i<6){
+                    var randomnum=Math.floor(Math.random()*6)+1
+                    pass=true;
+                    for (j=0;j<i;j++){
+                        if (randomnum==array[j]){
+                            pass=false;}}
+                    if (pass==true){
+                        array[i]=randomnum;
+                        i=i+1;}}
+                
+                console.log(array);
+                i=0;
+                var s=["pictures/2021WRO/REDCAR.png","pictures/2021WRO/GREENCAR.png","pictures/2021WRO/BLUECAR.png"];
+                while(i<6){
+                    document.getElementById("PARKINGCAR-Y"+String(i-1)).src="pictures/2021WRO/REDCAR.png";
+                    i=i+1;}}
         </script>
 
     </body>
