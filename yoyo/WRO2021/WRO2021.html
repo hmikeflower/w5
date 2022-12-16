@@ -6,6 +6,7 @@
     <body>
         <button onclick="location='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button><br>
         <button onclick="change()">change</button><br>
+        <button onclick="test()">test</button><br>
         <style type="text/css">
         #background{
             position:absolute;
@@ -13,37 +14,37 @@
             left:0px;
             z-index:0;
         }
-        #CAR-B1{
+        #CAR1{
             position:absolute;
             top:18px;
             left:205px;
             z-index:0;
         }
-        #CAR-B2{
+        #CAR2{
             position:absolute;
             top:70px;
             left:205px;
             z-index:0;
         }
-        #CAR-G1{
+        #CAR3{
             position:absolute;
             top:122px;
             left:205px;
             z-index:0;
         }
-        #CAR-G2{
+        #CAR4{
             position:absolute;
             top:174px;
             left:205px;
             z-index:0;
         }
-        #CAR-R1{
+        #CAR5{
             position:absolute;
             top:226px;
             left:205px;
             z-index:0;
         }
-        #CAR-R2{
+        #CAR6{
             position:absolute;
             top:278px;
             left:205px;
@@ -100,12 +101,12 @@
         </style>
         <div style="position:relative;">
             <img src="background.jpg" id="background">
-            <img src="CAR_B.png" id="CAR-B1">
-            <img src="CAR_B.png" id="CAR-B2">
-            <img src="CAR_G.png" id="CAR-G1">
-            <img src="CAR_G.png" id="CAR-G2">
-            <img src="CAR_R.png" id="CAR-R1">
-            <img src="CAR_R.png" id="CAR-R2">
+            <img src="CAR_B.png" id="CAR1">
+            <img src="CAR_B.png" id="CAR2">
+            <img src="CAR_G.png" id="CAR3">
+            <img src="CAR_G.png" id="CAR4">
+            <img src="CAR_R.png" id="CAR5">
+            <img src="CAR_R.png" id="CAR6">
             <img src="1.png" id="P-1">
             <img src="1.png" id="P-2">
             <img src="BAR.png" id="BAR-1">
@@ -115,5 +116,30 @@
             <img src="2.png" id="CAR-G">
             <img src="4.png" id="CAR-R">
         </div>
+        <script>
+            function test(){
+                var arraynum=[]
+                var randomnum=6
+                for(var i=0;i<randomnum;i++){
+                    arraynum[i]=Math.floor(Math.random()*randomnum)
+                    console.log(arraynum[i])
+                    /*if(i>0){
+                        for(var j=0;j<i;j++){
+                            if(arraynum[j]==arraynum[i]){
+                            i--
+                            break
+                            }
+                        }
+                    }*/
+                }
+            }
+            console.log(arraynum)
+            /*var CarArr=["CAR_B.png","CAR_G.png","CAR_R.png","CAR_B.png","CAR_G.png","CAR_R.png"],y=1
+            for(var k=0;k<arraynum.length;k++){
+                x="CAR"+y
+                y++
+                document.getElementById(x).src=CarArr[arraynum[k]];
+            }*/
+        </script>
     </body>
 </html>
