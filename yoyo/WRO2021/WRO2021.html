@@ -118,28 +118,24 @@
         </div>
         <script>
             function test(){
-                var arraynum=[]
-                var randomnum=6
+                var arraynum=[],randomnum=6,CarArr=["CAR_B.png","CAR_G.png","CAR_R.png","CAR_B.png","CAR_G.png","CAR_R.png"],y=1
                 for(var i=0;i<randomnum;i++){
                     arraynum[i]=Math.floor(Math.random()*randomnum)
-                    console.log(arraynum[i])
-                    /*if(i>0){
+                    if(i>0){
                         for(var j=0;j<i;j++){
                             if(arraynum[j]==arraynum[i]){
                             i--
                             break
                             }
                         }
-                    }*/
+                    }
                 }
-            }
-            console.log(arraynum)
-            /*var CarArr=["CAR_B.png","CAR_G.png","CAR_R.png","CAR_B.png","CAR_G.png","CAR_R.png"],y=1
-            for(var k=0;k<arraynum.length;k++){
-                x="CAR"+y
-                y++
-                document.getElementById(x).src=CarArr[arraynum[k]];
-            }*/
+                for(var k=0;k<arraynum.length;k++){
+                    x="CAR"+y
+                    y++
+                    document.getElementById(x).src=CarArr[arraynum[k]];
+                }
+            }   
         </script>
     </body>
 </html>
