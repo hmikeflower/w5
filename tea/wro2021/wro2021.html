@@ -50,6 +50,42 @@
             left:220px;
             z-index:1;
         }
+        #BAR0{
+            position:absolute;
+            top:22px;
+            left:638px;
+            z-index:1;
+        }
+        #BAR1{
+            position:absolute;
+            top:22px;
+            left:918px;
+            z-index:1;
+        }
+        #BAR2{
+            position:absolute;
+            top:248px;
+            left:486px;
+            z-index:1;
+        }
+        #BAR3{
+            position:absolute;
+            top:248px;
+            left:778px;
+            z-index:1;
+        }
+        #BAR4{
+            position:absolute;
+            top:419px;
+            left:638px;
+            z-index:1;
+        }
+        #BAR5{
+            position:absolute;
+            top:419px;
+            left:1071px;
+            z-index:1;
+        }
         </style>
         <h1>WRO 2021 出題機 </h1>
         <button onclick="movecar()">movecar</button>
@@ -64,16 +100,37 @@
             <img src="2.png" id="P5">
             <img src="3.png" id="P6">
             <img src="4.png" id="P7">
+            <img id="BAR0">
+            <img id="BAR1">
+            <img id="BAR2">
+            <img id="BAR3">
+            <img id="BAR4">
+            <img id="BAR5">
             </div>
         
         <script>
             function test()
             {
-            
+                RandBar()
             }
 
-
-
+            function RandBar()
+            {
+                var b ,c,x;
+                for (var i=0;i<6;i++){
+                b=Math.floor(Math.random() * 2)
+                c=Math.floor(Math.random() * 3)
+                x="BAR"+i;
+                if (b==1){
+                    document.getElementById(x).src="BAR.png"
+                }
+                else {
+                    document.getElementById(x).src="BAR.png"
+                }
+                console.log(b)
+                console.log(x)
+            }
+            }
 
 
 
