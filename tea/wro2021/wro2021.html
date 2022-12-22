@@ -2,7 +2,7 @@
     <head>
         
     <title>
-        wro 2021
+        wro
     </title>
     </head>
     <body>
@@ -87,9 +87,14 @@
             z-index:1;
         }
         </style>
-        <h1>WRO 2021 出題機 </h1>
+        <h1>WRO  出題機 </h1>
+        <select name="ver" id="ver">
+            <option value="Elementary"> Elementary | 國小 | 小学</option>
+            <option value="Junior" selected>Junior | 國中 | 中学</option>
+            <option value="Senior">Senior | 高中 | 高校</option>
+        </select>
         <button onclick="go()">隨機出題</button>
-        <button onclick="test()">RandBar</button>
+        <button onclick="test()">test</button>
         <button onclick="reset()">reset</button>
         </br>
         </br>
@@ -107,7 +112,9 @@
             <img id="BAR3">
             <img id="BAR4">
             <img id="BAR5">
-            </div>
+        </div>
+
+            
         
         <script>
             SwitchRow()
@@ -165,16 +172,6 @@
                 }
             }
             }
-
-
-
-
-
-
-
-
-            //movecar() //先執行一次 讓每次進來的圖片不同
-
         function movecar()
         {   
             
