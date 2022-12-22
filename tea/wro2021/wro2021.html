@@ -88,8 +88,9 @@
         }
         </style>
         <h1>WRO 2021 出題機 </h1>
-        <button onclick="movecar()">movecar</button>
-        <button onclick="test()">test</button>
+        <button onclick="go()">隨機出題</button>
+        <button onclick="test()">RandBar</button>
+        <button onclick="reset()">reset</button>
         </br>
         </br>
         <div style="position:relative;">
@@ -109,26 +110,59 @@
             </div>
         
         <script>
-            function test()
+            SwitchRow()
+            movecar()
+
+            function go()
             {
-                RandBar()
+                SwitchRow()
+                movecar()
+            }
+            function reset()
+            {
+                for (var i=0;i<6;i++){
+                    x="BAR"+i;
+                    document.getElementById(x).src=""
+                }
+            }
+            
+            function SwitchRow()
+            {   
+                reset()
+                var c;
+                c=Math.floor(Math.random() * 3)
+                console.log(c)
+                switch(c){
+                    case 0:
+                        RandBar(0)
+                        RandBar(2)
+                        break;
+                    case 1:
+                        RandBar(0)
+                        RandBar(4)
+                        break;
+                    case 2:
+                        RandBar(2)
+                        RandBar(4)
+                        break;
+                }
             }
 
-            function RandBar()
+            function RandBar(a)
             {
-                var b ,c,x;
-                for (var i=0;i<6;i++){
-                b=Math.floor(Math.random() * 2)
-                c=Math.floor(Math.random() * 3)
-                x="BAR"+i;
+                var a,b,x;
+                for (var i=a;i<a+1;i++){
+                    b=Math.floor(Math.random() * 2)
+                    x="BAR"+i;
                 if (b==1){
                     document.getElementById(x).src="BAR.png"
                 }
-                else {
+                else { 
+                    i++
+                    x="BAR"+i;
                     document.getElementById(x).src="BAR.png"
+                    i--
                 }
-                console.log(b)
-                console.log(x)
             }
             }
 
@@ -142,7 +176,9 @@
             //movecar() //先執行一次 讓每次進來的圖片不同
 
         function movecar()
-        {   // 先建立一個 0~6  不重複的array  arrNum
+        {   
+            
+            // 先建立一個 0~6  不重複的array  arrNum
             var arrNum=[];
             var ranNum = 6;
             var text="";
