@@ -145,13 +145,29 @@
         <div style="position:relative;">
             <img src="pictures/2021WRO/底圖.jpg" id="background">
             <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
-            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
-            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
-            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
-            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
-            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y1">
-            <img src="pictures/2021WRO/REDCAR.png" id="CAR-X1Y1">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y2">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y3">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y4">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y5">
+            <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y6">
+            <img src="pictures/2021WRO/REDCAR.DOT.png" id="CAR-X1Y1">
+            <img src="" id="CAR-X1Y2">
+            <img src="" id="CAR-X1Y3">
+            <img src="" id="CAR-X1Y4">
+            <img src="" id="CAR-X2Y1">
+            <img src="" id="CAR-X2Y2">
+            <img src="" id="CAR-X2Y3">
+            <img src="" id="CAR-X2Y4">
+            <img src="" id="CAR-X3Y1">
+            <img src="" id="CAR-X3Y2">
+            <img src="" id="CAR-X3Y3">
+            <img src="" id="CAR-X3Y4">
             <img src="pictures/2021WRO/BAR.png" id="BAR-X1Y1">
+            <img src="" id="BAR-X1Y2">
+            <img src="" id="BAR-X2Y1">
+            <img src="" id="BAR-X2Y2">
+            <img src="" id="BAR-X3Y1">
+            <img src="" id="BAR-X3Y2">
         </div>
 
         <script>
@@ -174,8 +190,9 @@
                 i=0;
                 var s=["pictures/2021WRO/REDCAR.png","pictures/2021WRO/GREENCAR.png","pictures/2021WRO/BLUECAR.png"];
                 while(i<6){
-                    document.getElementById("PARKINGCAR-Y"+String(i-1)).src="pictures/2021WRO/REDCAR.png";
+                    document.getElementById("PARKINGCAR-Y"+String(array[i])).src=s[i%3];
                     i=i+1;}}
+            random()
         </script>
 
     </body>
