@@ -7,6 +7,7 @@
         <button onclick="location='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button><br>
         <button onclick="change()">change</button><br>
         <button onclick="test()">test</button><br>
+        <button onclick="Switch()">bar</button><br>
         <style type="text/css">
         #background{
             position:absolute;
@@ -127,12 +128,12 @@
             <img src="CAR_R.png" id="CAR6">
             <img src="1.png" id="P-1">
             <img src="1.png" id="P-2">
-            <img src="BAR.png" id="BAR-1">
-            <img src="BAR.png" id="BAR-2">
-            <img src="BAR.png" id="BAR-3">
-            <img src="BAR.png" id="BAR-4">
-            <img src="BAR.png" id="BAR-5">
-            <img src="BAR.png" id="BAR-6">
+            <img id="BAR-1">
+            <img id="BAR-2">
+            <img id="BAR-3">
+            <img id="BAR-4">
+            <img id="BAR-5">
+            <img id="BAR-6">
             <img src="3.png" id="CAR-B">
             <img src="2.png" id="CAR-G">
             <img src="4.png" id="CAR-R">
@@ -158,7 +159,46 @@
                     document.getElementById(x).src=CarArr[arraynum[k]];
                 }   
             }
-            
+            function bar(a){
+                var bar=Math.floor(Math.random()*2),x,y,i=a+1
+                console.log(bar)
+                if(bar==0){
+                    x="BAR-"+a
+                    y="BAR-"+i
+                    document.getElementById(x).src="BAR.png"
+                    document.getElementById(y).src=""
+                }
+                if(bar==1){
+                    x="BAR-"+i
+                    y="BAR-"+a
+                    document.getElementById(x).src="BAR.png"
+                    document.getElementById(y).src=""
+                }
+            }
+            function Switch(){
+                reset()
+                var s=Math.floor(Math.random()*3)
+                switch(s){
+                    case 0:
+                        bar(1)
+                        bar(3)
+                    break;
+                    case 1:
+                        bar(1)
+                        bar(5)
+                    break;
+                    case 2:
+                        bar(3)
+                        bar(5)
+                    break;
+                }
+            }
+            function reset(){
+                for(var i=1;i<7;i++){
+                    x="BAR-"+i;
+                    document.getElementById(x).src=""
+                }
+            }
         </script>
     </body>
 </html>
