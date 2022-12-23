@@ -74,7 +74,7 @@
             #BAR-X2Y3{
                 position:absolute;
                 top:420px;
-                left:918px;
+                left:1058px;
                 z-index:0;}
 
 
@@ -163,15 +163,21 @@
             <img src="" id="CAR-X3Y3">
             <img src="" id="CAR-X3Y4">
             <img src="pictures/2021WRO/BAR.png" id="BAR-X1Y1">
+            <img src="pictures/2021WRO/BAR.png" id="BAR-X2Y1">
             <img src="" id="BAR-X1Y2">
-            <img src="" id="BAR-X2Y1">
             <img src="" id="BAR-X2Y2">
-            <img src="" id="BAR-X3Y1">
-            <img src="" id="BAR-X3Y2">
+            <img src="" id="BAR-X1Y3">
+            <img src="" id="BAR-X2Y3">
         </div>
 
         <script>
-            function random(){
+            random()
+
+        function random(){
+            random_CAR()
+            random_BAR()
+        }
+            function random_CAR(){
                 i=0;
                 var array=[];
                 var pass=true;
@@ -192,7 +198,35 @@
                 while(i<6){
                     document.getElementById("PARKINGCAR-Y"+String(array[i])).src=s[i%3];
                     i=i+1;}}
-            random()
+            
+        
+
+            function random_BAR(){
+                document.getElementById("BAR-X1Y1").src="";
+                document.getElementById("BAR-X2Y1").src="";
+                document.getElementById("BAR-X1Y2").src="";
+                document.getElementById("BAR-X2Y2").src="";
+                document.getElementById("BAR-X1Y3").src="";
+                document.getElementById("BAR-X2Y3").src="";
+
+
+                var array=[];
+                var randomnum=Math.floor(Math.random()*3)+1
+                    if (randomnum==1){
+                        array=[1,2];}
+                    else if (randomnum==2){
+                        array=[2,3];}
+                    else{
+                        array=[1,3];}
+                console.log(array);
+
+
+                var n=Math.floor(Math.random()*2)
+                console.log(n)
+                document.getElementById("BAR-X"+String(n+1)+"Y"+String(array[0])).src="pictures/2021WRO/BAR.png";
+                n=Math.floor(Math.random()*2)
+                console.log(n)
+                    document.getElementById("BAR-X"+String(n+1)+"Y"+String(array[1])).src="pictures/2021WRO/BAR.png";}
         </script>
 
     </body>
