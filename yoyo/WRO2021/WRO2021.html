@@ -152,12 +152,13 @@
                     }
                 }
                 console.log(arraynum)
+                for(var k=0;k<arraynum.length;k++){
+                    x="CAR"+y
+                    y++
+                    document.getElementById(x).src=CarArr[arraynum[k]];
+                }   
             }
-            for(var k=0;k<arraynum.length;k++){
-                x="CAR"+y
-                y++
-                document.getElementById(x).src=CarArr[arraynum[k]];
-            }
+            
         </script>
     </body>
 </html>
