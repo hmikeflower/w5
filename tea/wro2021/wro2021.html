@@ -97,7 +97,7 @@
         <button onclick="test()">test</button>
         <button onclick="reset()">reset</button>
         </br>
-        </br>
+
         <div style="position:relative;">
             <img src="wro.jpeg" id="P1">
             <img src="2.png" id="P2">
@@ -119,6 +119,16 @@
         <script>
             SwitchRow()
             movecar()
+
+            function test()
+            {   
+                var c;
+                c=Math.floor(Math.random() * 2)
+                console.log(c)
+
+                RandBar(2)
+            }
+
 
             function go()
             {
