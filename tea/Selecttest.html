@@ -1,0 +1,33 @@
+<html>
+    <head>
+        
+    <title>
+    Selecttest
+    </title>
+    </head>
+    <body>
+    <label>Select:
+        <select id="selectMode">
+            <option value="1">option_01</option>
+            <option value="2">option_02</option>
+            <option value="3">option_03</option>
+            <option value="4">option_04</option>
+            <option value="5">option_05</option>
+            <option value="6">option_06</option>
+        </select>
+        <button onclick="test()">test</button>
+</label>
+    <script>
+        function test(){
+            
+            console.log(document.getElementById("selectMode").value)
+        }
+        
+        //let select = document.querySelector("#selectMode");
+        //select.addEventListener("change", selectFun);
+
+    </script>
+
+
+    </body>
+    </html>

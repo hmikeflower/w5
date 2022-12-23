@@ -2,7 +2,7 @@
     <head>
         
     <title>
-        wro 2021
+        wro
     </title>
     </head>
     <body>
@@ -50,10 +50,52 @@
             left:220px;
             z-index:1;
         }
+        #BAR0{
+            position:absolute;
+            top:22px;
+            left:638px;
+            z-index:1;
+        }
+        #BAR1{
+            position:absolute;
+            top:22px;
+            left:918px;
+            z-index:1;
+        }
+        #BAR2{
+            position:absolute;
+            top:248px;
+            left:486px;
+            z-index:1;
+        }
+        #BAR3{
+            position:absolute;
+            top:248px;
+            left:778px;
+            z-index:1;
+        }
+        #BAR4{
+            position:absolute;
+            top:419px;
+            left:638px;
+            z-index:1;
+        }
+        #BAR5{
+            position:absolute;
+            top:419px;
+            left:1071px;
+            z-index:1;
+        }
         </style>
-        <h1>WRO 2021 出題機 </h1>
-        <button onclick="movecar()">movecar</button>
-        <button onclick="rand()">test</button>
+        <h1>WRO  出題機 </h1>
+        <select name="ver" id="ver">
+            <option value="Elementary"> Elementary | 國小 | 小学</option>
+            <option value="Junior" selected>Junior | 國中 | 中学</option>
+            <option value="Senior">Senior | 高中 | 高校</option>
+        </select>
+        <button onclick="go()">隨機出題</button>
+        <button onclick="test()">test</button>
+        <button onclick="reset()">reset</button>
         </br>
         </br>
         <div style="position:relative;">
@@ -64,13 +106,76 @@
             <img src="2.png" id="P5">
             <img src="3.png" id="P6">
             <img src="4.png" id="P7">
-            </div>
+            <img id="BAR0">
+            <img id="BAR1">
+            <img id="BAR2">
+            <img id="BAR3">
+            <img id="BAR4">
+            <img id="BAR5">
+        </div>
+
+            
         
         <script>
-            movecar() //先執行一次 讓每次進來的圖片不同
+            SwitchRow()
+            movecar()
 
+            function go()
+            {
+                SwitchRow()
+                movecar()
+            }
+            function reset()
+            {
+                for (var i=0;i<6;i++){
+                    x="BAR"+i;
+                    document.getElementById(x).src=""
+                }
+            }
+            
+            function SwitchRow()
+            {   
+                reset()
+                var c;
+                c=Math.floor(Math.random() * 3)
+                console.log(c)
+                switch(c){
+                    case 0:
+                        RandBar(0)
+                        RandBar(2)
+                        break;
+                    case 1:
+                        RandBar(0)
+                        RandBar(4)
+                        break;
+                    case 2:
+                        RandBar(2)
+                        RandBar(4)
+                        break;
+                }
+            }
+
+            function RandBar(a)
+            {
+                var a,b,x;
+                for (var i=a;i<a+1;i++){
+                    b=Math.floor(Math.random() * 2)
+                    x="BAR"+i;
+                if (b==1){
+                    document.getElementById(x).src="BAR.png"
+                }
+                else { 
+                    i++
+                    x="BAR"+i;
+                    document.getElementById(x).src="BAR.png"
+                    i--
+                }
+            }
+            }
         function movecar()
-        {   // 先建立一個 0~6  不重複的array  arrNum
+        {   
+            
+            // 先建立一個 0~6  不重複的array  arrNum
             var arrNum=[];
             var ranNum = 6;
             var text="";
@@ -89,24 +194,12 @@
             let CarPicArr = ["2.png","3.png","4.png","2.png","3.png","4.png"]
             var y =2;
             for (var j = 0; j < arrNum.length; j++) {
-                text += arrNum[j] + ".";
+                //text += arrNum[j] + ".";
                 x="P"+y;
                 y++;
                 document.getElementById(x).src=CarPicArr[arrNum[j]];
                     }
         }
-
-
-
-        function test()
-            {
-            //document.getElementById("P7").src="3.png"
-            //Math.floor(Math.random()* CarArr.length)
-            document.getElementById(x).src=CarPicArr[1];
-            document.getElementById(x).style.top=CarPosArr[1];
-            }
-        
-
         
         </script>
         
