@@ -5,9 +5,10 @@
     </head>
     <body>
         <button onclick="location='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button><br>
-        <button onclick="change()">change</button><br>
-        <button onclick="test()">test</button><br>
-        <button onclick="Switch()">bar</button><br>
+        <button onclick="change()">change</button>
+        <button onclick="test()">test</button>
+        <button onclick="Switch_bar()">bar</button>
+        <button onclick="Switch_p()">p</button>
         <style type="text/css">
         #background{
             position:absolute;
@@ -53,14 +54,74 @@
         }
         #P-1{
             position:absolute;
-            top:485px;
-            left:968px;
+            top:25px;
+            left:549px;
             z-index:0;
         }
         #P-2{
             position:absolute;
+            top:25px;
+            left:687px;
+            z-index:0;
+        }
+        #P-3{
+            position:absolute;
+            top:25px;
+            left:828px;
+            z-index:0;
+        }
+        #P-4{
+            position:absolute;
+            top:25px;
+            left:968px;
+            z-index:0;
+        }
+        #P-5{
+            position:absolute;
+            top:248px;
+            left:549px;
+            z-index:0;
+        }
+        #P-6{
+            position:absolute;
             top:248px;
             left:687px;
+            z-index:0;
+        }
+        #P-7{
+            position:absolute;
+            top:248px;
+            left:828px;
+            z-index:0;
+        }
+        #P-8{
+            position:absolute;
+            top:248px;
+            left:968px;
+            z-index:0;
+        }
+        #P-9{
+            position:absolute;
+            top:485px;
+            left:549px;
+            z-index:0;
+        }
+        #P-10{
+            position:absolute;
+            top:485px;
+            left:687px;
+            z-index:0;
+        }
+        #P-11{
+            position:absolute;
+            top:485px;
+            left:828px;
+            z-index:0;
+        }
+        #P-12{
+            position:absolute;
+            top:485px;
+            left:968px;
             z-index:0;
         }
         #BAR-1{
@@ -126,19 +187,38 @@
             <img src="CAR_G.png" id="CAR4">
             <img src="CAR_R.png" id="CAR5">
             <img src="CAR_R.png" id="CAR6">
-            <img src="1.png" id="P-1">
-            <img src="1.png" id="P-2">
+            <img id="P-1">
+            <img id="P-2">
+            <img id="P-3">
+            <img id="P-4">
+            <img id="P-5">
+            <img id="P-6">
+            <img id="P-7">
+            <img id="P-8">
+            <img id="P-9">
+            <img id="P-10">
+            <img id="P-11">
+            <img id="P-12">
             <img id="BAR-1">
             <img id="BAR-2">
             <img id="BAR-3">
             <img id="BAR-4">
             <img id="BAR-5">
             <img id="BAR-6">
-            <img src="3.png" id="CAR-B">
-            <img src="2.png" id="CAR-G">
-            <img src="4.png" id="CAR-R">
         </div>
         <script>
+            function reset_bar(){
+                for(var i=1;i<7;i++){
+                    x="BAR-"+i;
+                    document.getElementById(x).src=""
+                }
+            }
+            function reset_p(){
+                for(var i=1;i<13;i++){
+                    x="P-"+i;
+                    document.getElementById(x).src=""
+                }
+            }
             function test(){
                 var arraynum=[],randomnum=6,CarArr=["CAR_B.png","CAR_G.png","CAR_R.png","CAR_B.png","CAR_G.png","CAR_R.png"],y=1
                 for(var i=0;i<randomnum;i++){
@@ -175,8 +255,8 @@
                     document.getElementById(y).src=""
                 }
             }
-            function Switch(){
-                reset()
+            function Switch_bar(){
+                reset_bar()
                 var s=Math.floor(Math.random()*3)
                 switch(s){
                     case 0:
@@ -193,11 +273,212 @@
                     break;
                 }
             }
-            function reset(){
-                for(var i=1;i<7;i++){
-                    x="BAR-"+i;
-                    document.getElementById(x).src=""
+            function p(a,b){
+                var p1=document.getElementById("P-1").src,p2=document.getElementById("P-2").src,p3=document.getElementById("P-3").src,p4=document.getElementById("P-4").src,p5=document.getElementById("P-5").src,p6=document.getElementById("P-6").src,p7=document.getElementById("P-7").src,p8=document.getElementById("P-8").src,p9=document.getElementById("P-9").src,p10=document.getElementById("P-10").src,p11=document.getElementById("P-11").src,p12=document.getElementById("P-12").src
+                var p=Math.floor(Math.random()*4),i=a+1,j=a+2,k=a+3
+                console.log(p)
+                for(var m=0;m<1;m++){
+                    if(p==0){
+                        if(b==0){
+                            p_0()
+                        }
+                        if(b==1){
+                            if(a==1){
+                                if(p6==""||p11==""){
+                                    p_0()
+                                }
+                                else{
+                                    m--
+                                    p=Math.floor(Math.random()*4)
+                                }
+                            }
+                            if(a==5){
+                                if(p3==""||p12==""){
+                                    p_0()
+                                }
+                                else{
+                                    m--
+                                    p=Math.floor(Math.random()*4)
+                                }
+                            }
+                            if(a==9){
+                                if(p4==""||p8==""){
+                                    p_0()
+                                }
+                                else{
+                                    m--
+                                    p=Math.floor(Math.random()*4)
+                                }
+                            }
+                        }
+                    }
+                    if(p==1){
+                        if(b==0){
+                            p_1()
+                        }
+                        if(b==1){
+                            for(var m=0;m<1;m++){
+                                if(a==1){
+                                    if(p6==""||p11==""){
+                                        p_1()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                                if(a==5){
+                                    if(p1==""||p2==""||p11==""){
+                                        p_1()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                                if(a==9){
+                                    if(p4==""||p8==""){
+                                        p_1()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if(p==2){
+                        if(b==0){
+                            p_2()
+                        }
+                        if(b==1){
+                            for(var m=0;m<1;m++){
+                                if(a==1){
+                                    if(p5==""||p7==""||p12==""){
+                                        p_2()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                                if(a==5){
+                                    if(p3==""||p12==""){
+                                        p_2()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                                if(a==9){
+                                    if(p1==""||p2==""||p6==""){
+                                        p_2()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if(p==3){
+                        if(b==0){
+                            p_3()
+                        }
+                        if(b==1){
+                            for(var m=0;m<1;m++){
+                                if(a==1){
+                                    if(p8==""||p9==""||p10==""){
+                                        p_3()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                                if(a==5){
+                                    if(p4==""||p9==""||p10==""){
+                                        p_3()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                                if(a==9){
+                                    if(p3==""||p5==""||p7==""){
+                                        p_3()
+                                    }
+                                    else{
+                                        m--
+                                        p=Math.floor(Math.random()*4)
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
+            }
+            function Switch_p(){
+                reset_p()
+                var s=Math.floor(Math.random()*3)
+                switch(s){
+                    case 0:
+                        p(1,0)
+                        p(5,1)
+                    break;
+                    case 1:
+                        p(1,0)
+                        p(9,1)
+                    break;
+                    case 2:
+                        p(5,0)
+                        p(9,1)
+                    break;
+                }
+            }
+            function p_0(){
+                x="P-"+a
+                y="P-"+i
+                z="P-"+j
+                q="P-"+k
+                document.getElementById(x).src="1.png"
+                document.getElementById(y).src=""
+                document.getElementById(z).src=""
+                document.getElementById(q).src=""
+            }
+            function p_1(){
+                x="P-"+i
+                y="P-"+a
+                z="P-"+j
+                q="P-"+k
+                document.getElementById(x).src="1.png"
+                document.getElementById(y).src=""
+                document.getElementById(z).src=""
+                document.getElementById(q).src=""
+            }
+            function p_2(){
+                x="P-"+j
+                y="P-"+a
+                z="P-"+i
+                q="P-"+k
+                document.getElementById(x).src="1.png"
+                document.getElementById(y).src=""
+                document.getElementById(z).src=""
+                document.getElementById(q).src=""
+            }
+            function p_3(){
+                x="P-"+k
+                y="P-"+a
+                z="P-"+i
+                q="P-"+j
+                document.getElementById(x).src="1.png"
+                document.getElementById(y).src=""
+                document.getElementById(z).src=""
+                document.getElementById(q).src=""
             }
         </script>
     </body>
