@@ -243,10 +243,7 @@
 
                 function random_wall_and_CAR(){
                     var FIRST_WALL_Color="";
-                    var WALL1_PLACE="";
-                    var WALL2_PLACE="";
-                    var REDCAR_PLACE="";
-                    var GREENCAR_PLACE="";
+                    var PLACE=["","","",""]
                     var randomnum=Math.floor(Math.random()*3)+1
                         if (randomnum==1){
                             array=[1,2];}
@@ -259,7 +256,7 @@
                 var x=Math.floor(Math.random()*4)+1
                 document.getElementById("CAR-X"+String(x)+"Y"+String(array[0])).src="pictures/2021WRO/WALL.png";
                 FIRST_WALL_Color=PARKINGARENA_COLOR[x-1+(array[0]-1)*4];
-                WALL1_PLACE="CAR-X"+String(x)+"Y"+String(array[0]);
+                PLACE[0]="CAR-X"+String(x)+"Y"+String(array[0]);
 
 
                 
@@ -267,15 +264,34 @@
                 while (PARKINGARENA_COLOR[x-1+(array[1]-1)*4]==FIRST_WALL_Color){
                     x=Math.floor(Math.random()*4)+1;}
                 document.getElementById("CAR-X"+String(x)+"Y"+String(array[1])).src="pictures/2021WRO/WALL.png";
-                WALL2_PLACE="CAR-X"+String(x)+"Y"+String(array[1]);
+                PLACE[1]="CAR-X"+String(x)+"Y"+String(array[1]);
                 
 
                 x=Math.floor(Math.random()*4)+1;
                 y=Math.floor(Math.random()*3)+1;
-                while("CAR-X"+String(x)+"Y"+String(y)==WALL1_PLACE||"CAR-X"+String(x)+"Y"+String(y)==WALL2_PLACE){
+                while("CAR-X"+String(x)+"Y"+String(y)==PLACE[0]||"CAR-X"+String(x)+"Y"+String(y)==PLACE[1]||PARKINGARENA_COLOR[x-1+(y-1)*4]=="R"){
                     x=Math.floor(Math.random()*4)+1;
                     y=Math.floor(Math.random()*3)+1;}
-                    document.getElementById("CAR-X"+String(x)+"Y"+String(y)).src="pictures/2021WRO/REDCAR_DOT.png";}
+                document.getElementById("CAR-X"+String(x)+"Y"+String(y)).src="pictures/2021WRO/REDCAR_DOT.png";
+                PLACE[2]="CAR-X"+String(x)+"Y"+String(y);
+            
+            
+                x=Math.floor(Math.random()*4)+1;
+                y=Math.floor(Math.random()*3)+1;
+                while("CAR-X"+String(x)+"Y"+String(y)==PLACE[0]||"CAR-X"+String(x)+"Y"+String(y)==PLACE[1]||"CAR-X"+String(x)+"Y"+String(y)==PLACE[2]||PARKINGARENA_COLOR[x-1+(y-1)*4]!="G"){
+                    x=Math.floor(Math.random()*4)+1;
+                    y=Math.floor(Math.random()*3)+1;}
+                document.getElementById("CAR-X"+String(x)+"Y"+String(y)).src="pictures/2021WRO/GREENCAR_DOT.png";
+                PLACE[3]="CAR-X"+String(x)+"Y"+String(y);
+            
+            
+            
+                x=Math.floor(Math.random()*4)+1;
+                y=Math.floor(Math.random()*3)+1;
+                while("CAR-X"+String(x)+"Y"+String(y)==PLACE[0]||"CAR-X"+String(x)+"Y"+String(y)==PLACE[1]||"CAR-X"+String(x)+"Y"+String(y)==PLACE[2]||"CAR-X"+String(x)+"Y"+String(y)==PLACE[3]||PARKINGARENA_COLOR[x-1+(y-1)*4]!="B"){
+                    x=Math.floor(Math.random()*4)+1;
+                    y=Math.floor(Math.random()*3)+1;}
+                document.getElementById("CAR-X"+String(x)+"Y"+String(y)).src="pictures/2021WRO/BLUECAR_DOT.png";}
 
 
         </script>
