@@ -275,8 +275,8 @@
             function p(a,b){
                 var p1=document.getElementById("P-1").src,p2=document.getElementById("P-2").src,p3=document.getElementById("P-3").src,p4=document.getElementById("P-4").src,p5=document.getElementById("P-5").src,p6=document.getElementById("P-6").src,p7=document.getElementById("P-7").src,p8=document.getElementById("P-8").src,p9=document.getElementById("P-9").src,p10=document.getElementById("P-10").src,p11=document.getElementById("P-11").src,p12=document.getElementById("P-12").src
                 var p=Math.floor(Math.random()*4),i=a+1,j=a+2,k=a+3
-                p=0
                 for(var m=0;m<1;m++){
+                    console.log(p)
                     if(p==0){
                         if(b==0){
                             x="P-"+a
@@ -290,7 +290,7 @@
                         }
                         if(b==1){
                             if(a==1){
-                                if(p6==""&&p11==""){
+                                if(p6==p11){
                                     x="P-"+a
                                     y="P-"+i
                                     z="P-"+j
@@ -306,7 +306,7 @@
                                 }
                             }
                             if(a==5){
-                                if(p3==""&&p12==""){
+                                if(p3==p12){
                                     x="P-"+a
                                     y="P-"+i
                                     z="P-"+j
@@ -322,7 +322,7 @@
                                 }
                             }
                             if(a==9){
-                                if(p4==""&&p8==""){
+                                if(p4==p8){
                                     x="P-"+a
                                     y="P-"+i
                                     z="P-"+j
@@ -338,7 +338,6 @@
                                 }
                             }
                         }
-                    console.log(m)
                     }
                     if(p==1){
                         if(b==0){
@@ -352,54 +351,52 @@
                             document.getElementById(q).src=""
                         }
                         if(b==1){
-                            for(var m=0;m<1;m++){
-                                if(a==1){
-                                    if(p6==""&&p11==""){
-                                        x="P-"+i
-                                        y="P-"+a
-                                        z="P-"+j
-                                        q="P-"+k
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
+                            if(a==1){
+                                if(p6==p11){
+                                    x="P-"+i
+                                    y="P-"+a
+                                    z="P-"+j
+                                    q="P-"+k
+                                    document.getElementById(x).src="1.png"
+                                    document.getElementById(y).src=""
+                                    document.getElementById(z).src=""
+                                    document.getElementById(q).src=""
                                 }
-                                if(a==5){
-                                    if(p1==""&&p2==""&&p11==""){
-                                        x="P-"+i
-                                        y="P-"+a
-                                        z="P-"+j
-                                        q="P-"+k
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
+                                else{
+                                    m--
+                                    p=Math.floor(Math.random()*4)
+                                }       
+                            }
+                            if(a==5){
+                                if(p1==p2==p11){
+                                    x="P-"+i
+                                    y="P-"+a
+                                    z="P-"+j
+                                    q="P-"+k
+                                    document.getElementById(x).src="1.png"
+                                    document.getElementById(y).src=""
+                                    document.getElementById(z).src=""
+                                    document.getElementById(q).src=""
                                 }
-                                if(a==9){
-                                    if(p4==""&&p8==""){
-                                        x="P-"+i
-                                        y="P-"+a
-                                        z="P-"+j
-                                        q="P-"+k
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
+                                else{
+                                    m--
+                                    p=Math.floor(Math.random()*4)
+                                }
+                            }
+                            if(a==9){
+                                if(p4==p8){
+                                    x="P-"+i
+                                    y="P-"+a
+                                    z="P-"+j
+                                    q="P-"+k
+                                    document.getElementById(x).src="1.png"
+                                    document.getElementById(y).src=""
+                                    document.getElementById(z).src=""
+                                    document.getElementById(q).src=""
+                                }
+                                else{
+                                    m--
+                                    p=Math.floor(Math.random()*4)
                                 }
                             }
                         }
@@ -416,9 +413,9 @@
                             document.getElementById(q).src=""
                         }
                         if(b==1){
-                            for(var m=0;m<1;m++){
+                            
                                 if(a==1){
-                                    if(p5==""&&p7==""&&p12==""){
+                                    if(p5==p7==p12){
                                         x="P-"+j
                                         y="P-"+a
                                         z="P-"+i
@@ -434,7 +431,7 @@
                                     }
                                 }
                                 if(a==5){
-                                    if(p3==""&&p12==""){
+                                    if(p3==p12){
                                         x="P-"+j
                                         y="P-"+a
                                         z="P-"+i
@@ -450,7 +447,7 @@
                                     }
                                 }
                                 if(a==9){
-                                    if(p1==""&&p2==""&&p6==""){
+                                    if(p1==p2==p6){
                                         x="P-"+j
                                         y="P-"+a
                                         z="P-"+i
@@ -464,7 +461,7 @@
                                         m--
                                         p=Math.floor(Math.random()*4)
                                     }
-                                }
+                                
                             }
                         }
                     }
@@ -480,9 +477,9 @@
                             document.getElementById(q).src=""
                         }
                         if(b==1){
-                            for(var m=0;m<1;m++){
+                            
                                 if(a==1){
-                                    if(p8==""&&p9==""&&p10==""){
+                                    if(p8==p9==p10){
                                         x="P-"+k
                                         y="P-"+a
                                         z="P-"+i
@@ -498,7 +495,7 @@
                                     }
                                 }
                                 if(a==5){
-                                    if(p4==""&&p9==""&&p10==""){
+                                    if(p4==p9==p10){
                                         x="P-"+k
                                         y="P-"+a
                                         z="P-"+i
@@ -514,7 +511,7 @@
                                     }
                                 }
                                 if(a==9){
-                                    if(p3==""&&p5==""&&p7==""){
+                                    if(p3==p5==p7){
                                         x="P-"+k
                                         y="P-"+a
                                         z="P-"+i
@@ -529,17 +526,14 @@
                                         p=Math.floor(Math.random()*4)
                                     }
                                 }
-                            }
+                            
                         }
                     }
                 }
             }
             function Switch_p(){
-                console.log("1")
                 reset_p()
-                console.log("2")
-                p(5,1)
-                /*var s=Math.floor(Math.random()*3)
+                var s=Math.floor(Math.random()*3)
                 switch(s){
                     case 0:
                         p(1,0)
@@ -553,7 +547,7 @@
                         p(5,0)
                         p(9,1)
                     break;
-                }*/
+                }
             }
         </script>
     </body>
