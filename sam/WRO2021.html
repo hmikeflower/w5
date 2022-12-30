@@ -151,17 +151,17 @@
             <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y5">
             <img src="pictures/2021WRO/REDCAR.png" id="PARKINGCAR-Y6">
             <img src="pictures/2021WRO/REDCAR_DOT.png" id="CAR-X1Y1">
-            <img src="" id="CAR-X1Y2">
-            <img src="" id="CAR-X1Y3">
-            <img src="" id="CAR-X1Y4">
             <img src="" id="CAR-X2Y1">
-            <img src="" id="CAR-X2Y2">
-            <img src="" id="CAR-X2Y3">
-            <img src="" id="CAR-X2Y4">
             <img src="" id="CAR-X3Y1">
+            <img src="" id="CAR-X4Y1">
+            <img src="" id="CAR-X1Y2">
+            <img src="" id="CAR-X2Y2">
             <img src="" id="CAR-X3Y2">
+            <img src="" id="CAR-X4Y2">
+            <img src="" id="CAR-X1Y3">
+            <img src="" id="CAR-X2Y3">
             <img src="" id="CAR-X3Y3">
-            <img src="" id="CAR-X3Y4">
+            <img src="" id="CAR-X4Y3">
             <img src="pictures/2021WRO/BAR.png" id="BAR-X1Y1">
             <img src="pictures/2021WRO/BAR.png" id="BAR-X2Y1">
             <img src="" id="BAR-X1Y2">
@@ -232,10 +232,12 @@
                 function CLEAR_Parkingarena(){
                     var j=1;
                     var i=1;
-                    while(j<3){
-                        while(i<4){
+                    while(j<4){
+                        while(i<5){
                             document.getElementById("CAR-X"+String(i)+"Y"+String(j)).src="";
+                            console.log("CAR-X"+String(i)+"Y"+String(j));
                         i=i+1;}
+                    i=1;
                     j=j+1;}}
 
 
