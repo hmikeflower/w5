@@ -241,7 +241,6 @@
             }
             function bar(a){
                 var bar=Math.floor(Math.random()*2),x,y,i=a+1
-                console.log(bar)
                 if(bar==0){
                     x="BAR-"+a
                     y="BAR-"+i
@@ -276,7 +275,7 @@
             function p(a,b){
                 var p1=document.getElementById("P-1").src,p2=document.getElementById("P-2").src,p3=document.getElementById("P-3").src,p4=document.getElementById("P-4").src,p5=document.getElementById("P-5").src,p6=document.getElementById("P-6").src,p7=document.getElementById("P-7").src,p8=document.getElementById("P-8").src,p9=document.getElementById("P-9").src,p10=document.getElementById("P-10").src,p11=document.getElementById("P-11").src,p12=document.getElementById("P-12").src
                 var p=Math.floor(Math.random()*4),i=a+1,j=a+2,k=a+3
-                console.log(p)
+                p=0
                 for(var m=0;m<1;m++){
                     if(p==0){
                         if(b==0){
@@ -291,7 +290,7 @@
                         }
                         if(b==1){
                             if(a==1){
-                                if(p6==""||p11==""){
+                                if(p6==""&&p11==""){
                                     x="P-"+a
                                     y="P-"+i
                                     z="P-"+j
@@ -307,7 +306,7 @@
                                 }
                             }
                             if(a==5){
-                                if(p3==""||p12==""){
+                                if(p3==""&&p12==""){
                                     x="P-"+a
                                     y="P-"+i
                                     z="P-"+j
@@ -323,7 +322,7 @@
                                 }
                             }
                             if(a==9){
-                                if(p4==""||p8==""){
+                                if(p4==""&&p8==""){
                                     x="P-"+a
                                     y="P-"+i
                                     z="P-"+j
@@ -339,6 +338,7 @@
                                 }
                             }
                         }
+                    console.log(m)
                     }
                     if(p==1){
                         if(b==0){
@@ -354,7 +354,7 @@
                         if(b==1){
                             for(var m=0;m<1;m++){
                                 if(a==1){
-                                    if(p6==""||p11==""){
+                                    if(p6==""&&p11==""){
                                         x="P-"+i
                                         y="P-"+a
                                         z="P-"+j
@@ -370,7 +370,7 @@
                                     }
                                 }
                                 if(a==5){
-                                    if(p1==""||p2==""||p11==""){
+                                    if(p1==""&&p2==""&&p11==""){
                                         x="P-"+i
                                         y="P-"+a
                                         z="P-"+j
@@ -386,7 +386,7 @@
                                     }
                                 }
                                 if(a==9){
-                                    if(p4==""||p8==""){
+                                    if(p4==""&&p8==""){
                                         x="P-"+i
                                         y="P-"+a
                                         z="P-"+j
@@ -418,7 +418,7 @@
                         if(b==1){
                             for(var m=0;m<1;m++){
                                 if(a==1){
-                                    if(p5==""||p7==""||p12==""){
+                                    if(p5==""&&p7==""&&p12==""){
                                         x="P-"+j
                                         y="P-"+a
                                         z="P-"+i
@@ -434,7 +434,7 @@
                                     }
                                 }
                                 if(a==5){
-                                    if(p3==""||p12==""){
+                                    if(p3==""&&p12==""){
                                         x="P-"+j
                                         y="P-"+a
                                         z="P-"+i
@@ -450,7 +450,7 @@
                                     }
                                 }
                                 if(a==9){
-                                    if(p1==""||p2==""||p6==""){
+                                    if(p1==""&&p2==""&&p6==""){
                                         x="P-"+j
                                         y="P-"+a
                                         z="P-"+i
@@ -482,7 +482,7 @@
                         if(b==1){
                             for(var m=0;m<1;m++){
                                 if(a==1){
-                                    if(p8==""||p9==""||p10==""){
+                                    if(p8==""&&p9==""&&p10==""){
                                         x="P-"+k
                                         y="P-"+a
                                         z="P-"+i
@@ -498,7 +498,7 @@
                                     }
                                 }
                                 if(a==5){
-                                    if(p4==""||p9==""||p10==""){
+                                    if(p4==""&&p9==""&&p10==""){
                                         x="P-"+k
                                         y="P-"+a
                                         z="P-"+i
@@ -514,7 +514,7 @@
                                     }
                                 }
                                 if(a==9){
-                                    if(p3==""||p5==""||p7==""){
+                                    if(p3==""&&p5==""&&p7==""){
                                         x="P-"+k
                                         y="P-"+a
                                         z="P-"+i
@@ -535,8 +535,11 @@
                 }
             }
             function Switch_p(){
+                console.log("1")
                 reset_p()
-                var s=Math.floor(Math.random()*3)
+                console.log("2")
+                p(5,1)
+                /*var s=Math.floor(Math.random()*3)
                 switch(s){
                     case 0:
                         p(1,0)
@@ -550,7 +553,7 @@
                         p(5,0)
                         p(9,1)
                     break;
-                }
+                }*/
             }
         </script>
     </body>
