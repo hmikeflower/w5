@@ -86,6 +86,79 @@
             left:1071px;
             z-index:1;
         }
+        #ParkSpace00{
+            position:absolute;
+            top:20px;
+            left:550px;
+            z-index:1;
+        }
+        #ParkSpace10{
+            position:absolute;
+            top:20px;
+            left:686px;
+            z-index:1;
+        }
+        #ParkSpace20{
+            position:absolute;
+            top:20px;
+            left:830px;
+            z-index:1;
+        }
+        #ParkSpace30{
+            position:absolute;
+            top:20px;
+            left:965px;
+            z-index:1;
+        }
+        #ParkSpace01{
+            position:absolute;
+            top:250px;
+            left:550px;
+            z-index:1;
+        }
+        #ParkSpace11{
+            position:absolute;
+            top:250px;
+            left:686px;
+            z-index:1;
+        }
+        #ParkSpace21{
+            position:absolute;
+            top:250px;
+            left:830px;
+            z-index:1;
+        }
+        #ParkSpace31{
+            position:absolute;
+            top:250px;
+            left:965px;
+            z-index:1;
+        }
+        #ParkSpace02{
+            position:absolute;
+            top:470px;
+            left:550px;
+            z-index:1;
+        }
+        #ParkSpace12{
+            position:absolute;
+            top:470px;
+            left:686px;
+            z-index:1;
+        }
+        #ParkSpace22{
+            position:absolute;
+            top:470px;
+            left:830px;
+            z-index:1;
+        }
+        #ParkSpace32{
+            position:absolute;
+            top:470px;
+            left:965px;
+            z-index:1;
+        }
+
         </style>
         <h1>WRO  出題機 </h1>
         <select name="ver" id="ver">
@@ -112,6 +185,18 @@
             <img id="BAR3">
             <img id="BAR4">
             <img id="BAR5">
+            <img  id="ParkSpace00">
+            <img  id="ParkSpace10">
+            <img  id="ParkSpace20">
+            <img  id="ParkSpace30">
+            <img  id="ParkSpace01">
+            <img  id="ParkSpace11">
+            <img  id="ParkSpace21">
+            <img  id="ParkSpace31">
+            <img  id="ParkSpace02">
+            <img  id="ParkSpace12">
+            <img  id="ParkSpace22">
+            <img  id="ParkSpace32">
         </div>
 
             
@@ -140,6 +225,14 @@
                 for (var i=0;i<6;i++){
                     x="BAR"+i;
                     document.getElementById(x).src=""
+                }
+                for (var j=0;j<3;j++){
+                    for (var k=0;k<4;k++){
+                        y="ParkSpace"+k;
+                        y=y+j
+                        console.log(y)
+                        document.getElementById(y).src=""
+                }
                 }
             }
             
