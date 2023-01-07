@@ -6,9 +6,9 @@
     <body>
         <button onclick="location='http://hmikeflower.github.io/w5/yoyo/index.html'">回首頁</button><br>
         <button onclick="change()">change</button>
+        <button onclick="car()">car</button>
         <button onclick="test()">test</button>
         <button onclick="Switch_bar()">bar</button>
-        <button onclick="Switch_p()">p</button>
         <style type="text/css">
         #background{
             position:absolute;
@@ -207,19 +207,30 @@
             <img id="BAR-6">
         </div>
         <script>
+            function change(){
+                car()
+                test()
+                Switch_bar()
+            }
+
+
             function reset_bar(){
                 for(var i=1;i<7;i++){
                     x="BAR-"+i;
                     document.getElementById(x).src=""
                 }
             }
+
+
             function reset_p(){
                 for(var i=1;i<13;i++){
                     x="P-"+i;
                     document.getElementById(x).src=""
                 }
             }
-            function test(){
+
+
+            function car(){
                 var arraynum=[],randomnum=6,CarArr=["CAR_B.png","CAR_G.png","CAR_R.png","CAR_B.png","CAR_G.png","CAR_R.png"],y=1
                 for(var i=0;i<randomnum;i++){
                     arraynum[i]=Math.floor(Math.random()*randomnum)
@@ -239,6 +250,8 @@
                     document.getElementById(x).src=CarArr[arraynum[k]];
                 }   
             }
+
+
             function bar(a){
                 var bar=Math.floor(Math.random()*2),x,y,i=a+1
                 if(bar==0){
@@ -254,6 +267,8 @@
                     document.getElementById(y).src=""
                 }
             }
+
+
             function Switch_bar(){
                 reset_bar()
                 var s=Math.floor(Math.random()*3)
@@ -272,281 +287,58 @@
                     break;
                 }
             }
-            function p(a,b){
-                var p1=document.getElementById("P-1").src,p2=document.getElementById("P-2").src,p3=document.getElementById("P-3").src,p4=document.getElementById("P-4").src,p5=document.getElementById("P-5").src,p6=document.getElementById("P-6").src,p7=document.getElementById("P-7").src,p8=document.getElementById("P-8").src,p9=document.getElementById("P-9").src,p10=document.getElementById("P-10").src,p11=document.getElementById("P-11").src,p12=document.getElementById("P-12").src
-                var p=Math.floor(Math.random()*4),i=a+1,j=a+2,k=a+3
-                for(var m=0;m<1;m++){
-                    console.log(p)
-                    if(p==0){
-                        if(b==0){
-                            x="P-"+a
-                            y="P-"+i
-                            z="P-"+j
-                            q="P-"+k
-                            document.getElementById(x).src="1.png"
-                            document.getElementById(y).src=""
-                            document.getElementById(z).src=""
-                            document.getElementById(q).src=""
-                        }
-                        if(b==1){
-                            if(a==1){
-                                if(p6==p11){
-                                    x="P-"+a
-                                    y="P-"+i
-                                    z="P-"+j
-                                    q="P-"+k
-                                    document.getElementById(x).src="1.png"
-                                    document.getElementById(y).src=""
-                                    document.getElementById(z).src=""
-                                    document.getElementById(q).src=""
-                                }
-                                else{
-                                    m--
-                                    p=Math.floor(Math.random()*4)
-                                }
-                            }
-                            if(a==5){
-                                if(p3==p12){
-                                    x="P-"+a
-                                    y="P-"+i
-                                    z="P-"+j
-                                    q="P-"+k
-                                    document.getElementById(x).src="1.png"
-                                    document.getElementById(y).src=""
-                                    document.getElementById(z).src=""
-                                    document.getElementById(q).src=""
-                                }
-                                else{
-                                    m--
-                                    p=Math.floor(Math.random()*4)
-                                }
-                            }
-                            if(a==9){
-                                if(p4==p8){
-                                    x="P-"+a
-                                    y="P-"+i
-                                    z="P-"+j
-                                    q="P-"+k
-                                    document.getElementById(x).src="1.png"
-                                    document.getElementById(y).src=""
-                                    document.getElementById(z).src=""
-                                    document.getElementById(q).src=""
-                                }
-                                else{
-                                    m--
-                                    p=Math.floor(Math.random()*4)
-                                }
-                            }
-                        }
-                    }
-                    if(p==1){
-                        if(b==0){
-                            x="P-"+i
-                            y="P-"+a
-                            z="P-"+j
-                            q="P-"+k
-                            document.getElementById(x).src="1.png"
-                            document.getElementById(y).src=""
-                            document.getElementById(z).src=""
-                            document.getElementById(q).src=""
-                        }
-                        if(b==1){
-                            if(a==1){
-                                if(p6==p11){
-                                    x="P-"+i
-                                    y="P-"+a
-                                    z="P-"+j
-                                    q="P-"+k
-                                    document.getElementById(x).src="1.png"
-                                    document.getElementById(y).src=""
-                                    document.getElementById(z).src=""
-                                    document.getElementById(q).src=""
-                                }
-                                else{
-                                    m--
-                                    p=Math.floor(Math.random()*4)
-                                }       
-                            }
-                            if(a==5){
-                                if(p1==p2==p11){
-                                    x="P-"+i
-                                    y="P-"+a
-                                    z="P-"+j
-                                    q="P-"+k
-                                    document.getElementById(x).src="1.png"
-                                    document.getElementById(y).src=""
-                                    document.getElementById(z).src=""
-                                    document.getElementById(q).src=""
-                                }
-                                else{
-                                    m--
-                                    p=Math.floor(Math.random()*4)
-                                }
-                            }
-                            if(a==9){
-                                if(p4==p8){
-                                    x="P-"+i
-                                    y="P-"+a
-                                    z="P-"+j
-                                    q="P-"+k
-                                    document.getElementById(x).src="1.png"
-                                    document.getElementById(y).src=""
-                                    document.getElementById(z).src=""
-                                    document.getElementById(q).src=""
-                                }
-                                else{
-                                    m--
-                                    p=Math.floor(Math.random()*4)
-                                }
-                            }
-                        }
-                    }
-                    if(p==2){
-                        if(b==0){
-                            x="P-"+j
-                            y="P-"+a
-                            z="P-"+i
-                            q="P-"+k
-                            document.getElementById(x).src="1.png"
-                            document.getElementById(y).src=""
-                            document.getElementById(z).src=""
-                            document.getElementById(q).src=""
-                        }
-                        if(b==1){
-                            
-                                if(a==1){
-                                    if(p5==p7==p12){
-                                        x="P-"+j
-                                        y="P-"+a
-                                        z="P-"+i
-                                        q="P-"+k
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
-                                }
-                                if(a==5){
-                                    if(p3==p12){
-                                        x="P-"+j
-                                        y="P-"+a
-                                        z="P-"+i
-                                        q="P-"+k
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
-                                }
-                                if(a==9){
-                                    if(p1==p2==p6){
-                                        x="P-"+j
-                                        y="P-"+a
-                                        z="P-"+i
-                                        q="P-"+k
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
-                                
-                            }
-                        }
-                    }
-                    if(p==3){
-                        if(b==0){
-                            x="P-"+k
-                            y="P-"+a
-                            z="P-"+i
-                            q="P-"+j
-                            document.getElementById(x).src="1.png"
-                            document.getElementById(y).src=""
-                            document.getElementById(z).src=""
-                            document.getElementById(q).src=""
-                        }
-                        if(b==1){
-                            
-                                if(a==1){
-                                    if(p8==p9==p10){
-                                        x="P-"+k
-                                        y="P-"+a
-                                        z="P-"+i
-                                        q="P-"+j
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
-                                }
-                                if(a==5){
-                                    if(p4==p9==p10){
-                                        x="P-"+k
-                                        y="P-"+a
-                                        z="P-"+i
-                                        q="P-"+j
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
-                                }
-                                if(a==9){
-                                    if(p3==p5==p7){
-                                        x="P-"+k
-                                        y="P-"+a
-                                        z="P-"+i
-                                        q="P-"+j
-                                        document.getElementById(x).src="1.png"
-                                        document.getElementById(y).src=""
-                                        document.getElementById(z).src=""
-                                        document.getElementById(q).src=""
-                                    }
-                                    else{
-                                        m--
-                                        p=Math.floor(Math.random()*4)
-                                    }
-                                }
-                            
+
+            
+            function test(){
+                reset_p()
+                var a=Math.floor(Math.random()*12),b,c=0
+                var ParkArr=[["R","P-1",0,0],["R","P-2",0,0],["G","P-3",0,0],["B","P-4",0,0],
+                            ["G","P-5",0,1],["R","P-6",0,1],["G","P-7",0,1],["B","P-8",0,1],
+                            ["B","P-9",0,2],["B","P-10",0,2],["R","P-11",0,2],["G","P-12",0,2]]
+                document.getElementById(ParkArr[a][1]).src="1.png"
+                ParkArr[a][2]=1
+                while(c==0){
+                    b=Math.floor(Math.random()*12)
+                    if(ParkArr[a][3]!=ParkArr[b][3]){
+                        if(ParkArr[a][0]!=ParkArr[b][0]){
+                            document.getElementById(ParkArr[b][1]).src="1.png"
+                            ParkArr[b][2]=1
+                            c=1
                         }
                     }
                 }
-            }
-            function Switch_p(){
-                reset_p()
-                var s=Math.floor(Math.random()*3)
-                switch(s){
-                    case 0:
-                        p(1,0)
-                        p(5,1)
-                    break;
-                    case 1:
-                        p(1,0)
-                        p(9,1)
-                    break;
-                    case 2:
-                        p(5,0)
-                        p(9,1)
-                    break;
+                c=0
+                while(c==0){
+                    b=Math.floor(Math.random()*12)
+                    if(ParkArr[b][2]==0){
+                        if(ParkArr[b][0]!="R"){
+                            document.getElementById(ParkArr[b][1]).src="4.png"
+                            ParkArr[b][2]=1
+                            c=1
+                        }
+                    }
+                }
+                c=0
+                while(c==0){
+                    b=Math.floor(Math.random()*12)
+                    if(ParkArr[b][2]==0){
+                        if(ParkArr[b][0]=="B"){
+                            document.getElementById(ParkArr[b][1]).src="3.png"
+                            ParkArr[b][2]=1
+                            c=1
+                        }
+                    }
+                }
+                c=0
+                while(c==0){
+                    b=Math.floor(Math.random()*12)
+                    if(ParkArr[b][2]==0){
+                        if(ParkArr[b][0]=="G"){
+                            document.getElementById(ParkArr[b][1]).src="2.png"
+                            ParkArr[b][2]=1
+                            c=1
+                        }
+                    }
                 }
             }
         </script>
