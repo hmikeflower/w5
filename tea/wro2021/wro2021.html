@@ -167,8 +167,7 @@
             <option value="Senior">Senior | 高中 | 高校</option>
         </select>
         <button onclick="go()">隨機出題</button>
-        <button onclick="RoandStop()">test</button>
-        <button onclick="reset()">reset</button>
+    
         </br>
 
         <div style="position:relative;">
@@ -202,11 +201,63 @@
             
         
         <script>
-            SwitchRow()
-            movecar()
+            go()
 
-            function test()
-            {   
+
+            function RandCarStop()
+            {
+                
+            var a ,b,aa=0
+            var ParkArr=[["R","ParkSpace00",0,0],["R","ParkSpace10",0,0],["G","ParkSpace20",0,0],["B","ParkSpace30",0,0],
+                        ["G","ParkSpace01",0,1],["R","ParkSpace11",0,1],["G","ParkSpace21",0,1],["B","ParkSpace31",0,1],
+                        ["B","ParkSpace02",0,2],["B","ParkSpace12",0,2],["R","ParkSpace22",0,2],["G","ParkSpace32",0,2]] 
+            a=Math.floor(Math.random()*12)
+            document.getElementById(ParkArr[a][1]).src="1.png"
+            ParkArr[a][2]=1;
+            
+            while (aa==0){
+                b=Math.floor(Math.random()*12)
+                if(ParkArr[a][3]!=ParkArr[b][3]){
+                    if(ParkArr[a][0]!=ParkArr[b][0]){
+                        document.getElementById(ParkArr[b][1]).src="1.png"
+                        ParkArr[b][2]=1;
+                        aa=1;
+                    }
+                    }
+                }
+                aa=0
+                while (aa==0){
+                b=Math.floor(Math.random()*12)
+                if(ParkArr[b][2]==0){
+                    if(ParkArr[b][0]!="R"){
+                        document.getElementById(ParkArr[b][1]).src="b0.png"
+                        ParkArr[b][2]=1;
+                        aa=1;
+                    }
+                    }
+                }
+                aa=0
+                while (aa==0){
+                b=Math.floor(Math.random()*12)
+                if(ParkArr[b][2]==0){
+                    if(ParkArr[b][0]=="G"){
+                        document.getElementById(ParkArr[b][1]).src="b1.png"
+                        ParkArr[b][2]=1;
+                        aa=1;
+                    }
+                    }
+                }
+                aa=0
+                while (aa==0){
+                b=Math.floor(Math.random()*12)
+                if(ParkArr[b][2]==0){
+                    if(ParkArr[b][0]=="B"){
+                        document.getElementById(ParkArr[b][1]).src="b2.png"
+                        ParkArr[b][2]=1;
+                        aa=1;
+                    }
+                    }
+                }
                 
             }
 
@@ -215,6 +266,7 @@
             {
                 SwitchRow()
                 movecar()
+                RandCarStop()
             }
 
             function RoandStop(){
