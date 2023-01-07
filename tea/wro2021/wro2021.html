@@ -167,7 +167,7 @@
             <option value="Senior">Senior | 高中 | 高校</option>
         </select>
         <button onclick="go()">隨機出題</button>
-        <button onclick="test()">test</button>
+        <button onclick="RoandStop()">test</button>
         <button onclick="reset()">reset</button>
         </br>
 
@@ -207,11 +207,7 @@
 
             function test()
             {   
-                var c;
-                c=Math.floor(Math.random() * 2)
-                console.log(c)
-
-                RandBar(2)
+                
             }
 
 
@@ -220,6 +216,79 @@
                 SwitchRow()
                 movecar()
             }
+
+            function RoandStop(){
+                var d,e,f
+                d=Math.floor(Math.random()*12)
+                //console.log(d)
+                let StopArr = [["R","ParkSpace00",0,0],["R","ParkSpace10",0,0],["G","ParkSpace20",0,0],["B","ParkSpace30",0,0],
+                                ["G","ParkSpace01",0,1],["R","ParkSpace11",0,1],["G","ParkSpace21",0,1],["B","ParkSpace31",0,1],
+                                ["B","ParkSpace02",0,2],["B","ParkSpace12",0,2],["R","ParkSpace22",0,2],["G","ParkSpace32",0,2]] 
+                        
+                        document.getElementById(StopArr[d][1]).src="1.png"
+                        StopArr[d][2]=1;
+                
+                //console.log(StopArr[d])
+                var xx=0,yy=0,zz
+                while (xx==0){
+                    e=Math.floor(Math.random()*12)
+                    if (d!=e){
+                        if (StopArr[d][0]!=StopArr[e][0]){
+                            if (StopArr[d][3]!=StopArr[e][3]){
+                                document.getElementById(StopArr[e][1]).src="1.png"
+                                StopArr[e][2]=1;
+                                xx=1;
+                            }
+                        }
+                    }
+                }
+            zz=Math.floor(Math.random()*3)
+            
+            switch(zz){
+                case 0://(R)
+                    while(yy==0){
+                        f=Math.floor(Math.random()*12)
+                        if ( StopArr[f][2]==0){
+                            if ( StopArr[f][0]=="R"){
+                                document.getElementById(StopArr[f][1]).src="b0.png"
+                                StopArr[f][2]=1;
+                                yy=1;
+                            }
+                        }
+                    }
+                    break;
+                case 1://(G)
+                    while(yy==0){
+                            f=Math.floor(Math.random()*12)
+                            if ( StopArr[f][2]==0){
+                                if ( StopArr[f][0]=="G"){
+                                    document.getElementById(StopArr[f][1]).src="b1.png"
+                                    StopArr[f][2]=1;
+                                    yy=1;
+                                }
+                            }
+                        }
+                    break;
+                case 2://(B)
+                    while(yy==0){
+                            f=Math.floor(Math.random()*12)
+                            if ( StopArr[f][2]==0){
+                                if ( StopArr[f][0]=="B"){
+                                    document.getElementById(StopArr[f][1]).src="b2.png"
+                                    StopArr[f][2]=1;
+                                    yy=1;
+                                }
+                            }
+                        }
+                    
+                    break;    
+
+
+            }
+                
+            
+        }
+
             function reset()
             {
                 for (var i=0;i<6;i++){
@@ -230,7 +299,6 @@
                     for (var k=0;k<4;k++){
                         y="ParkSpace"+k;
                         y=y+j
-                        console.log(y)
                         document.getElementById(y).src=""
                 }
                 }
@@ -241,7 +309,7 @@
                 reset()
                 var c;
                 c=Math.floor(Math.random() * 3)
-                console.log(c)
+                //console.log(c)
                 switch(c){
                     case 0:
                         RandBar(0)
