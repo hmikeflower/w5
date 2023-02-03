@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>TaiwanSamYT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>資料表</h1>
+    <p>請填入相關資料</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label for="first-name">姓: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">名: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Gmail: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">密碼: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" />個人帳戶</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" />品牌帳戶</label>
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> 我同意<a href="https://www.freecodecamp.org/news/terms-of-service/">資料使用條款</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">上傳大頭照:<input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">您的年齡: <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">你如何得知的?
+          <select id="referrer" name="referrer">
+            <option value="">(擇一選擇)</option>
+            <option value="1">他人推薦</option>
+            <option value="2">YOUTUBE演算法推薦</option>
+            <option value="3">我推薦</option>
+            <option value="4">其他</option>
+          </select>
+        </label>
+        <label for="bio">提供意見:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="TaiwanSamYT是我們的神"></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="送出" />
+    </form>
+  </body>
+</html>
