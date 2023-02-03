@@ -5,6 +5,16 @@
         <title>SelfProducingbutton</title>
     </head>
     <body>
+        <style>
+            .move{
+                background-color: rgb(0, 255, 0);
+        }
+
+        .out{
+                background-color: rgb(255, 255, 255);
+        }
+        </style>
+
         <button onmousedown='console.log("滑鼠按下")'
                 onmouseup='console.log("滑鼠鬆開")'
                 ondbclick='console.log("滑鼠連點")'
@@ -12,5 +22,18 @@
                 onmouseout='console.log("滑鼠退出")'
                 onclick='console.log("滑鼠點擊")'>
                 HI</button>
+
+        <span   onmousemove='move()'
+                onmouseout='out()' id="hi">
+                HI</span>
+
+                <script>
+                    function move(){
+                        Document.getElementbyId("hi").style=".move"
+                    }
+                    function out(){
+                        Document.getElementbyId("hi").style=".out"
+                    }
+                </script>
     </body>
 </html>
