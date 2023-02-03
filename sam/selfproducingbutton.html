@@ -23,16 +23,17 @@
                 onclick='console.log("滑鼠點擊")'>
                 HI</button>
 
-        <span   onmousemove='move()'
+        <span   class=".out"
+                onmousemove='move()'
                 onmouseout='out()' id="hi">
                 HI</span>
 
                 <script>
                     function move(){
-                        Document.getElementbyId("hi").style=".move"
+                        document.getElementbyId("hi").style.BackgroundColor=rgb(0, 255, 0)
                     }
                     function out(){
-                        Document.getElementbyId("hi").style=".out"
+                        document.getElementbyId("hi").tyle.BackgroundColor=rgb(255, 255, 255)
                     }
                 </script>
     </body>
