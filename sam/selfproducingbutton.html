@@ -61,10 +61,19 @@
 <br><br>
 <span id="event">HI</span>
 <script>
-    xx=document.getElementById("event")
-    xx.addEventListener("mouseover",function(){
-        console.log("123")
-    })
+    n=0;
+    xx=document.getElementById("jj")
+    xx.addEventListener("mousemove",function(){
+        n=n+1;
+        if (n<87){
+            document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jjup.png';            }
+        else{
+            document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jjshoot.png';}})
+
+    xx.addEventListener("mouseout",function(){
+        document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jj.png';
+        n=0;})
+
 </script>
 
 
