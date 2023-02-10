@@ -27,32 +27,32 @@
 
         <span   class=".out"
                 onmousemove='move(this)'
-                onmouseout='out(this)' id="hi" >
+                onmouseout='out(this)' padding="5px">
                 HI</span>
 
                 <script>
                     n=0;
-                    function move(a){
-                        a.style.BackgroundColor="rgb(0, 255, 0)"
-                        a.style.padding="10px"
-                        a.style.fontWeight="bold";
+                    function move(aa){
+                        aa.style.BackgroundColor="rgb(0, 255, 0)"
+                        aa.style.padding="10px"
+                        aa.style.fontWeight="bold";
                         
                         n=n+1;
 
                         if (n<87){
-                            document.getElementById("hi").innerHTML="爽";
+                            aa.innerHTML="爽";
                             document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jjup.png';
                         }
                         else{
-                            document.getElementById("hi").innerHTML="咻";
+                            aa.innerHTML="咻";
                             document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jjshoot.png';
                         }
                     }
-                    function out(a){
-                        a.style.BackgroundColor="rgb(255, 255, 255)"
-                        a.style.fontWeight="normal";
-                        a.style.padding="5px"
-                        document.getElementById("hi").innerHTML="嗨";
+                    function out(aa){
+                        aa.style.BackgroundColor="rgb(255, 255, 255)"
+                        aa.style.fontWeight="normal";
+                        aa.style.padding="5px"
+                        aa.innerHTML="嗨";
                         document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jj.png';
                         n=0;
                     }
