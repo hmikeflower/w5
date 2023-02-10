@@ -24,16 +24,16 @@
                 HI</button>
 
         <span   class=".out"
-                onmousemove='move()'
-                onmouseout='out()' id="hi">
+                onmousemove='move(this)'
+                onmouseout='out(this)' id="hi">
                 HI</span>
 
                 <script>
-                    function move(){
-                        document.getElementbyId("hi").style.BackgroundColor="rgb(0, 255, 0)"
+                    function move(this){
+                        this.style.BackgroundColor="rgb(0, 255, 0)"
                     }
                     function out(){
-                        document.getElementbyId("hi").style.BackgroundColor="rgb(255, 255, 255)"
+                        this.style.BackgroundColor="rgb(255, 255, 255)"
                     }
                 </script>
     </body>
