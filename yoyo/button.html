@@ -3,6 +3,28 @@
         <title>Button</title>
     </head>
     <body>
-        <button onmousedown="console.log('滑鼠按下')" onmouseup="console.log('滑鼠放開')">Hahaha</button>
+        <style>
+            .button{
+                border-radius: 10px;
+                background-color: rgb(0, 255, 255);
+                padding: 5px;
+                cursor: pointer;
+            }
+        </style>
+        <button onmousedown="console.log('滑鼠按下')" onmouseup="console.log('滑鼠放開')" onmousemove="console.log('滑鼠進入')" onmouseout="console.log('滑鼠離開')" onclick="console.log('滑鼠點擊')" ondblclick="console.log('滑鼠連點')">Hahaha</button><br><br>
+        <span class="button"
+            onmousemove="buttonmove(this)"
+            onmouseout="buttonout(this)"
+        > 自製按鈕 </span>
+        <script>
+            function buttonmove(move){
+                move.style.backgroundColor="rgb(0,255,0)"
+                move.style.fontWeight="bold";
+            }
+            function buttonout(move){
+                move.style.backgroundColor="rgb(0,255,255)"
+                move.style.fontWeight="normal";
+            }
+        </script>
     </body>
 </html>
