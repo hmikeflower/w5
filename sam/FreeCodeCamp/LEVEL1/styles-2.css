@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    background-image: url(http://127.0.0.1:5500/sam/pictures/TaiwanSamYT.svg);
     font-family: sans-serif;
     padding: 20px;
   }
@@ -24,7 +24,7 @@ body {
   
   .menu {
     width: 80%;
-    background-color: burlywood;
+    background-color: rgb(0, 255, 0);
     margin-left: auto;
     margin-right: auto;
     padding: 20px;

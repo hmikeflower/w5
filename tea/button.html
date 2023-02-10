@@ -3,9 +3,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>button test</title>
+        <style>
+        .btn{
+            background-color: #7ea231;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        </style>
     </head>
     <bady>
+        <button onclick="console.log('滑鼠點擊')" 
+                onmousedown ="console.log('滑鼠按下')"
+                onmouseup ="console.log('滑鼠鬆開')"
+                onmouseout ="console.log('滑鼠離開')"
+                onmousemove ="console.log('滑鼠進入')"
+                ondblclick ="console.log('滑鼠連點')">
+                陣雨又</button>
+        </br>
+        </br>
 
+        <spane class="btn" 
+        onmousemove ="btnmove(this)"
+        onmouseout ="btnout(this)"
+        >我是自製按鈕</spane>
+        </br>
+    </br>
+</br>
+        <script>
+
+            function btnmove(elem){
+                elem.style.backgroundColor ="#ddaaaa";
+            }
+
+            function btnout(elem){
+                elem.style.backgroundColor ="#7ea231";
+            }
+        </script>
     </bady>
 </html>
 
