@@ -16,14 +16,17 @@
             onmousemove="buttonmove(this)"
             onmouseout="buttonout(this)"
         > 自製按鈕 </span>
+        
         <script>
             function buttonmove(move){
                 move.style.backgroundColor="rgb(0,255,0)"
                 move.style.fontWeight="bold";
+                move.style.padding="10px"
             }
             function buttonout(move){
                 move.style.backgroundColor="rgb(0,255,255)"
                 move.style.fontWeight="normal";
+                move.style.padding="5px"
             }
         </script>
     </body>
