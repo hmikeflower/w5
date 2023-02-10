@@ -14,6 +14,8 @@
                 background-color: rgb(255, 255, 255);
         }
         </style>
+        
+        <img src='http://hmikeflower.github.io/w5/sam/pictures/jj.png' id="jj">
 
         <button onmousedown='console.log("滑鼠按下")'
                 onmouseup='console.log("滑鼠鬆開")'
@@ -29,11 +31,26 @@
                 HI</span>
 
                 <script>
+                    n=0;
                     function move(this){
                         this.style.BackgroundColor="rgb(0, 255, 0)"
+                        
+                        n=n+1;
+
+                        if (n<87){
+                            document.getElementById("hi").innerHTML="爽";
+                            document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jjup.png';
+                        }
+                        else{
+                            document.getElementById("hi").innerHTML="咻";
+                            document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jjshoot.png';
+                        }
                     }
                     function out(){
                         this.style.BackgroundColor="rgb(255, 255, 255)"
+                        document.getElementById("hi").innerHTML="Hi";
+                        document.getElementById("jj").src='http://hmikeflower.github.io/w5/sam/pictures/jj.png';
+                        n=0;
                     }
                 </script>
     </body>
