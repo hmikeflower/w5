@@ -62,7 +62,7 @@
             })
             var body=document.body
             body.addEventListener("keydown",function(bb){
-                var keycode=bb.keyCode,ntop
+                var keycode=bb.keyCode
                 document.getElementById("KeycodeNumber").value=keycode
                 if(bb.keyCode==71){
                     document.getElementById("btn").style.padding="10px"
@@ -71,7 +71,13 @@
                     document.getElementById("btn").style.padding="5px"
                 }
                 if(bb.keyCode==87){
-                    document.getElementById("btn").style.top=ntop
+                    top=document.getElementById("btn").style.top
+                    Number(top)
+                    alert(typeof top)
+                    top=top-5
+                    String(top)
+                    alert(typeof top)
+                    document.getElementById("btn").style.top=top
                 }
             })
         </script>
