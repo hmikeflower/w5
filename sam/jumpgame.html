@@ -23,7 +23,7 @@
         <br>
         <button onclick="start()" id="start">開始遊戲</button>
         <button onclick="startorstop()" id="startorstop">開始遊戲</button>
-        <div id="score">分數:</div>
+        <div id="score">最高分數:0 分數:0</div>
 
         <script>
             var xpos=Array[0,0,0,0,0,0,0,0,0,0,0];
@@ -103,7 +103,41 @@
             
 
 
-            function start(){}
+            function start(){
+                gameevent="firststart";
+                document.getElementById("start").innerHTML="重新開始";
+                document.getElementById("startorstop").innerHTML="暫停";}
+
+            function startorstop(){
+                if(gameevent=="waitforstart"){
+                    gameevent="firststart";
+                    document.getElementById("start").innerHTML="重新開始";
+                    document.getElementById("startorstop").innerHTML="暫停";}
+                else if(gameevent=="keep"){
+                    document.getElementById("startorstop").innerHTML="繼續遊戲";
+                    gameevent="wait";}
+                else if(gameevent=="wait"){
+                    document.getElementById("startorstop").innerHTML="暫停";
+                    gameevent="keep";}}
+
+
+            function updatescore(){
+                if(yofall>score){
+                    score=yofall;}
+                if(score>highestscore){
+                    highestscore=score;}
+                    document.getElementById("score").innerHTML="最高分數:"+String(highestscore)+" 分數:"+String(score);}
+
+
+
+            function detectsingletouch(A_xpos,A_ypos,A_height,A_width,B_xpos,B_ypos,B_height,B_width){
+                if(B_xpos-A_xpos<A_width&&A_xpos-B_xpos<B_width&&B_ypos-A_ypos<A_height&&A_ypos-B_ypos<B_height){
+                    touch=true;}
+                else{
+                    touch=false;}}
+
+
+            
         </script>
     </body>
 </html>
