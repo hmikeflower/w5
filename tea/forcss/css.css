@@ -1,0 +1,52 @@
+div{
+    position: absolute;
+    /* 建立邊界 粗度 實現 顏色 */
+    border: 1px solid red;
+    /* 寬度設定 */
+    width: 400px;
+    /* 字的顏色 */
+    color: red;
+    /* 背景顏色 */
+    background-color: #ccc;
+    top: 50px;
+    left: 50px;
+
+
+}
+p{
+    border: 1px solid black;
+    color: white;
+    font-size: 18px;
+    font-family: "微軟正黑體";
+    line-height: 2;
+    /* 字的排列 */
+    text-align: center;
+     /* 外距 */
+    margin: 0;
+}
+
+.color1{
+    
+    background-color: red;
+}
+
+.color2{
+    
+    background-color: rgb(38, 37, 88);
+}
+
+.color3{
+    
+    background-color:#30343b;
+    
+}
+.color4{
+    
+    background-color:#44b81a;
+}
+.color5{
+    
+    background-color:#9c751a;
+    height: 500px;
+
+}

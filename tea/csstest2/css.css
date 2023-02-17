@@ -1,0 +1,28 @@
+
+div{
+    border: 2px solid black;
+    color: red;
+    width: 1500px;
+    height: 900px;
+    background-color: #ccc;
+}
+img{
+    position: absolute;
+    top:800px;
+    border: 2px solid black;
+}
+
+
+#pic1{
+    left: 100px;
+}
+#pic2{
+    left: 300px;
+    border: 0px solid black;
+}
+#pic3{
+    left: 500px;
+}
+#pic4{
+    left: 700px;
+}
