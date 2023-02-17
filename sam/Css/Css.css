@@ -1,6 +1,27 @@
 div{
-    color:lime;
+    background-color:lime;
     border:2px solid black;
-    width: 500px;
-    height: 500px;
-}
+    width: 500px !important;
+    height: 500px;}
+
+p{
+    text-align: center;
+    color:lime;
+    font-size: large;
+    font-family: "標楷體";
+    line-height: normal;
+    margin: 0; /*外距 */
+    background-color: rgb(161, 255, 255);}
+
+.class1{
+    background-color: red;}
+.class2{
+    background-color: yellow;}
+.class3{
+    background-color: lime;}
+.class4{
+    background-color: green;}
+.class5{
+    background-color: blue;}
+#class{
+    width: 100px;}
