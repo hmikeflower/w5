@@ -1,0 +1,68 @@
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button test</title>
+        <style>
+        .btn{
+            background-color:rgb(238,130,238);
+            padding: 50px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        </style>
+    </head>
+    <bady>
+        </br>
+
+        <spane class="btn" id="btn1">我是自製按鈕</spane>
+        </br>
+    </br>
+</br>
+        <img id="img1" src="p1.png"></img>>
+        </br>
+    </br>
+</br>
+        <script>
+            var count=0;
+            var xx =document.getElementById("btn1")
+            var body =document.body
+
+
+
+            body.addEventListener("keydown",function(e){
+                aa=e.keyCode
+                if (aa==71){
+                    
+                }
+            })
+                
+                
+
+            xx.addEventListener("mousemove",function(){
+                this.style.backgroundColor="#ddaaaa"
+            })
+            xx.addEventListener("mouseout",function(){
+                this.style.backgroundColor="#7ea231"
+
+            })
+            xx.addEventListener("click",function(){
+                count=count+1
+            })
+
+
+            var imgx =document.getElementById("img1")
+            imgx.addEventListener("mousemove",function(){
+                this.src="p2.png"
+            })
+            var imgx =document.getElementById("img1")
+            imgx.addEventListener("mouseout",function(){
+                this.src="p1.png"
+            })
+            
+        </script>
+    </bady>
+</html>
+
