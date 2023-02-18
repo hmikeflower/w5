@@ -158,6 +158,16 @@
                     if(touch==true&&yspeed<0){
                         yspeed=30;}
                     i=i+1;}}
+
+
+            function detectfall(){
+                if(yspeed>50){
+                    ypos[0]=ypos[0]-10;}
+                if(ypos[0]<-190){
+                    gameevent="fall";
+                    document.getElementById("startorstop").innerHTML="重新開始";}
+                if(gameevent=="fall"){
+                    gameevent="waitforstart";}}
         </script>
     </body>
 </html>
