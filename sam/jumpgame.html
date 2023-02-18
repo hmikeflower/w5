@@ -65,8 +65,8 @@
                     xpos[0]=240;}
                 if(xpos[0]>240){
                     xpos[0]=-240;}
-                xspeed=xspeed*0.8;
-                console.log("/s");
+                xspeed=xspeed*0.85;
+                console.log("/");
                 yspeed=yspeed+0.5;
                 yofall=yofall+yspeed;}
 
@@ -150,7 +150,7 @@
                     score=yofall;}
                 if(score>highestscore){
                     highestscore=score;}
-                    document.getElementById("score").innerHTML="xSpeed:"+String(xspeed)+"最高分數:"+String(highestscore)+" 分數:"+String(score);}
+                    document.getElementById("score").innerHTML="最高分數:"+String(highestscore)+" 分數:"+String(score)+"xSpeed:"+String(xspeed);}
 
 
 
