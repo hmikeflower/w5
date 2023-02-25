@@ -8,17 +8,17 @@
 
 
         <div style="position:absolute; width: 480; height: 360; background-color: aqua; left:0; top:0">
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="main"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="main" height="15" width="15"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor1"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor1_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor2"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor2_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor3"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor3_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor4"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor4_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor5"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor5_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor6"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor6_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor7"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor7_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor8"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor8_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor9"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor9_picture" height="15" width="60"></div>
-            <div style="position:absolute; left:0; top:0; overflow: visible;" id="floor10"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor10_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="main"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="main" height="15" width="15"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor1"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor1_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor2"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor2_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor3"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor3_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor4"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor4_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor5"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor5_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor6"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor6_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor7"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor7_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor8"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor8_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor9"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor9_picture" height="15" width="60"></div>
+            <div style="position:absolute; left:0; top:0; display: none;" id="floor10"><img src="http://hmikeflower.github.io/w5/sam/pictures/black.png" id="floor10_picture" height="15" width="60"></div>
         </div>
 
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -49,9 +49,9 @@
                 i=1;
                 while(i<11){
                     if(document.getElementById("floor"+String(i)).style.top<-180||document.getElementById("floor"+String(i)).style.top>180){
-                        document.getElementById("floor"+String(i)).style.overflow="hidden";}
+                        document.getElementById("floor"+String(i)).style.display=none;}
                     else{
-                        document.getElementById("floor"+String(i)).style. overflow="visible";}
+                        document.getElementById("floor"+String(i)).style.display=inline;}
                     document.getElementById("floor"+String(i)).style.top=180-ypos[i];
                     document.getElementById("floor"+String(i)).style.left=240+xpos[i];
                     i=i+1;}}
