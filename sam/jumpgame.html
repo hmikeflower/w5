@@ -49,7 +49,7 @@
                 i=1;
                 while(i<11){
                     if(document.getElementById("floor"+String(i)).style.top<-180||document.getElementById("floor"+String(i)).style.top>180){
-                        document.getElementById("floor"+String(i)+"_picture").src="http://hmikeflower.github.io/w5/sam/pictures/white.png";}
+                        document.getElementById("floor"+String(i)+"_picture").hidden;}
                     else{
                         document.getElementById("floor"+String(i)+"_picture").src="http://hmikeflower.github.io/w5/sam/pictures/black.png";}
                     document.getElementById("floor"+String(i)).style.top=180-ypos[i];
