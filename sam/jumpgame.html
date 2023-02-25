@@ -72,8 +72,6 @@
                 if(xspeed<10&&keypress=="right"){
                     xspeed=xspeed+(0.3-0.1*(xspeed>7));}
                 
-                keypress="none";
-                
                 xspeed=xspeed*0.85;
                 yspeed=yspeed+0.5;
                 yofall=yofall+yspeed;}
@@ -114,7 +112,9 @@
                         if(e.keyCode==37||e.keyCode==65){
                             keypress="left";}
                         if(e.keyCode==39||e.keyCode==68){
-                            keypress="right";}})
+                            keypress="right";}
+                        if(((e.keyCode==37||e.keyCode==65)&&(e.keyCode==39||e.keyCode==68))||(e.keyCode!=37&&e.keyCode!=65)&&(e.keyCode!=39&&e.keyCode!=68)){
+                            keypress="";}})
                     detectplayertouchfloor();
                     detectfall();
                     updateposition();
