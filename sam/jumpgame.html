@@ -114,7 +114,7 @@
                             keypress="left";}
                         if(e.keyCode==39||e.keyCode==68){
                             keypress="right";}
-                        if(((e.keyCode==37||e.keyCode==65)&&(e.keyCode==39||e.keyCode==68))||(e.keyCode!=37&&e.keyCode!=65)&&(e.keyCode!=39&&e.keyCode!=68)){
+                        if((e.keyCode!=37&&e.keyCode!=65)&&(e.keyCode!=39&&e.keyCode!=68)){
                             keypress="";}})
                     detectplayertouchfloor();
                     detectfall();
