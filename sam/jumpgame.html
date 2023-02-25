@@ -37,7 +37,6 @@
             var highestscore=0;
             var touch=false;
             var keypress="";
-            var a=0;
 
             setInterval("startthegame()",30)
 
@@ -122,8 +121,11 @@
                             else{
                                 keypress="right";}}
                         if((e.keyCode!=37&&e.keyCode!=65)&&(e.keyCode!=39&&e.keyCode!=68)){
-                            keypress="";}})
-                    a=e.keyCode;
+                            }})
+                    
+                    document.body.addEventListener("keyup",function(e){
+                        keypress="";})
+                            
                     detectplayertouchfloor();
                     detectfall();
                     updateposition();
@@ -155,7 +157,7 @@
                     score=yofall;}
                 if(score>highestscore){
                     highestscore=score;}
-                    document.getElementById("score").innerHTML="最高分數:"+String(highestscore)+" 分數:"+String(score)+"xSpeed:"+String(a);}
+                    document.getElementById("score").innerHTML="最高分數:"+String(highestscore)+" 分數:"+String(score);}
 
 
 
