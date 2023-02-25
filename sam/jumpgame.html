@@ -36,6 +36,7 @@
             var score=0;
             var highestscore=0;
             var touch=false;
+            var keypress="";
 
             setInterval("startthegame()",30)
 
@@ -65,8 +66,15 @@
                     xpos[0]=240;}
                 if(xpos[0]>240){
                     xpos[0]=-240;}
+
+                if(xspeed>-10&&keypress=="left"){
+                        xspeed=xspeed-(0.3-0.1*(xspeed<-7));}
+                if(xspeed<10&&keypress=="right"){
+                    xspeed=xspeed+(0.3-0.1*(xspeed>7));}
+                
+                keypress="none";
+                
                 xspeed=xspeed*0.85;
-                console.log("/");
                 yspeed=yspeed+0.5;
                 yofall=yofall+yspeed;}
 
@@ -104,21 +112,9 @@
                 else if(gameevent=="keep"){
                     document.body.addEventListener("keydown",function(e){
                         if(e.keyCode==37||e.keyCode==65){
-                            if(xspeed>-10){
-                                xspeed=xspeed-0.3;
-                                console.log("-");
-                                if(xspeed>-7){
-                                    }
-                                else{
-                                    }}}
+                            keypress="left";}
                         if(e.keyCode==39||e.keyCode==68){
-                            if(xspeed<10){
-                                xspeed=xspeed+0.3;
-                                console.log("+");
-                                if(xspeed<7){
-                                    }
-                                else{
-                                    }}}console.log("xSpeed:",xspeed)})
+                            keypress="right";}})
                     detectplayertouchfloor();
                     detectfall();
                     updateposition();
