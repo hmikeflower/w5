@@ -75,7 +75,7 @@
                 if(keypress==""){
                     xspeed=xspeed*0.85;}
                 yspeed=yspeed+0.5;
-                yofall=yofall+yspeed;}
+                yofall=yofall-yspeed;}
 
             function summonfloor(){
                 i=0;
@@ -119,9 +119,7 @@
                             if(e.keyCode==37||e.keyCode==65){
                                 keypress="left";}
                             else{
-                                keypress="right";}}
-                        if((e.keyCode!=37||e.keyCode!=65)&&(e.keyCode!=39||e.keyCode!=68)){
-                            keypress="";}})
+                                keypress="right";}}})
                     
                     document.body.addEventListener("keyup",function(e){
                         keypress="";})
