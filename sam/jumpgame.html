@@ -120,8 +120,8 @@
                                 keypress="left";}
                             else{
                                 keypress="right";}}
-                        if((e.keyCode!=37&&e.keyCode!=65)&&(e.keyCode!=39&&e.keyCode!=68)){
-                            }})
+                        if((e.keyCode!=37||e.keyCode!=65)&&(e.keyCode!=39||e.keyCode!=68)){
+                            keypress="";}})
                     
                     document.body.addEventListener("keyup",function(e){
                         keypress="";})
