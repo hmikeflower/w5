@@ -68,11 +68,11 @@
                     xpos[0]=-240;}
 
                 if(xspeed>-10&&keypress=="left"){
-                        xspeed=xspeed-(0.6-0.1*(xspeed<-7));}
+                        xspeed=xspeed-(1-0.2*(xspeed<-7));}
                 if(xspeed<10&&keypress=="right"){
-                    xspeed=xspeed+(0.6-0.1*(xspeed>7));}
+                    xspeed=xspeed+(1-0.2*(xspeed>7));}
                 
-                xspeed=xspeed*0.85;
+                xspeed=xspeed*0.9;
                 yspeed=yspeed+0.5;
                 yofall=yofall+yspeed;}
 
