@@ -1,0 +1,21 @@
+.box{
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 10px solid black; 
+    overflow: hidden;
+    display: inline-block;
+}
+.sonbox{
+    width: 100px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 10px solid rgb(16, 26, 223);
+    display: inline-block;
+}
+.sonboxx{
+    width: 100px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 10px solid rgb(255, 0, 0);
+}
