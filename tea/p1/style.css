@@ -20,6 +20,7 @@ html,body{
 .product{
     height: 540px;
     width: 800px;
+    background-color: #fff;
 
     /* 居中對齊 */
     margin-left: auto;
