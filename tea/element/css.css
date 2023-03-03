@@ -8,95 +8,136 @@ body{
 }
 .wrapper{
     margin: 0px;
-    border: 5px solid rgb(13, 13, 13);
-    height: 910px;
-    width: 910px;
+    /* border: 5px solid rgb(13, 13, 13); */
+    height: 900px;
+    width: 900px;
     display: inline-block;
     vertical-align: top;
 }
-.fatherbox1{
-    display: inline-block;
-    height: 100%;
-    border: 1px solid rgb(13, 13, 13);
-    box-sizing: border-box;
-    height: 500px;
-    width: 500px;
-    background-color: rgb(248, 72, 72);
-    overflow: hidden;
-    /* margin-right: 16px; */
-    vertical-align: top;
-    /* margin-bottom: 16px; */
-    border-radius: 240px;
-}
-
 .fatherbox{
     display: inline-block;
-    border: 1px solid rgb(13, 13, 13);
+    /* border: 1px solid rgb(13, 13, 13); */
     box-sizing: border-box;
     height: 300px;
     width: 300px;
-    background-color: rgb(248, 72, 72);
+    /* background-color: rgb(248, 72, 72); */
     overflow: hidden;
     /* margin-right: 16px; */
     vertical-align: top;
     /* margin-bottom: 16px; */
 }
-.sonbox{
+
+.fatherbox1{
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    background-color: #fff;
+    vertical-align: top;
+    border-radius: 150px;
+    
+}
+
+.sonbox1{
     /* border: 1px solid red; */
-    /* box-sizing: block; */
-    height: 150px;
+    display: block;
+    height: 50%;
     width:100%;
     
     background-color: rgb(249, 249, 98);
     
 }
-.sonbox.color1{
-    
+.sonbox2{
+    height: 50%;
+    width:100%;
     background-color: rgb(96, 216, 96);
-    
 }
 
-.sonbox1{
+.sonbox3{
     display: inline-block;
     width: 50%;
     height: 100%;
-    border: 1px solid black;
     background-color: rgb(220, 147, 147);
-}
-.sonbox1.color1{
-    display: inline-block;
-    background-color: rgb(131, 131, 239);
     vertical-align: top;
-
 }
-.sonsonbox{
+.sonbox4{
     display: inline-block;
-    background-color: turquoise;
+    width: 50%;
     height: 100%;
-    width: 100px;
-}
-.sonsonbox.color1{
-    background-color: peru;
-}
-.sonsonbox.color2{
-    background-color: rgb(200, 63, 205);
-}
-.sonsonbox.color3{
-    background-color: rgb(63, 205, 188);
+    background-color: rgb(148, 147, 224);
+    /* vertical-align: top; */
 }
 
 .sonsonbox1{
-    /* display: inline-block; */
-    background-color: rgb(240, 246, 245);
-    height: 100px;
+    display: block;
     width: 100%;
+    height: 50px;
 }
 .sonsonbox1.color1{
-    background-color: rgb(42, 73, 65);
+    
+    background-color: #544e4e;
 }
 .sonsonbox1.color2{
-    background-color: rgb(80, 16, 18);
+    
+    background-color: #f57878;
 }
 .sonsonbox1.color3{
-    background-color: rgb(205, 191, 63);
+    
+    background-color: #7f6df2;
+}
+
+
+.sonsonbox2{
+    display: block;
+    height: 100px;
+    
+}
+.sonsonbox2.color1{
+    
+    background-color: #107548;
+}
+.sonsonbox2.color2{
+    
+    background-color: #a4bc2c;
+}
+.sonsonbox2.color3{
+    
+    background-color: #b527c8;
+}
+
+.sonsonbox3{
+    display: inline-block;
+    height: 100%;
+    width: 100px;
+    
+}
+.sonsonbox3.color1{
+    
+    background-color: #3c0497;
+}
+.sonsonbox3.color2{
+    
+    background-color: #2cb7bc;
+}
+.sonsonbox3.color3{
+    
+    background-color: #b93f3f;
+}
+
+.sonsonbox4{
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+    
+}
+.sonsonbox4.color1{
+    
+    background-color: #edc376;
+}
+.sonsonbox4.color2{
+    
+    background-color: #0cdca1;
+}
+.sonsonbox4.color3{
+    
+    background-color: #8a3894;
 }
