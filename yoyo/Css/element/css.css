@@ -1,51 +1,122 @@
-.box{
-    width: 200px;
-    height: 200px;
+*{
     box-sizing: border-box;
-    border: 10px solid black; 
+}
+body{
+    background-color: white;
+}
+.Bigbox{
+    margin: 0px;
+    height: 900px;
+    width: 900px;
+    display: inline-block;
+    vertical-align: top;
+}
+.Mediumbox{
+    display: inline-block;
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
     overflow: hidden;
-    display: inline-block;
+    vertical-align: top;
 }
-.sonbox{
-    width: 100%;
+.Circle{
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    background-color: #00fff2;
+    vertical-align: top;
+    border-radius: 150px;
+    
+}
+.sonbox1{
+    display: block;
     height: 50%;
-    box-sizing: border-box;
-    /* border: 1px solid rgb(0, 0, 255); */
-    display: inline-block;
-    background-color: aqua;
+    width:100%;
+    background-color: rgb(249, 249, 98);
 }
-.sonboxx{
+.sonbox2{
+    height: 50%;
+    width:100%;
+    background-color: rgb(96, 216, 96);
+}
+.sonbox3{
+    display: inline-block;
     width: 50%;
     height: 100%;
-    box-sizing: border-box;
-    /* border: 1px solid rgb(0, 0, 255); */
+    background-color: rgb(220, 147, 147);
+    vertical-align: top;
+}
+.sonbox4{
     display: inline-block;
-    background-color: rgb(255, 255, 0);
+    width: 50%;
+    height: 100%;
+    background-color: rgb(148, 147, 224);
+    /* vertical-align: top; */
 }
-.sonbox.color1{
-    background-color: rgb(0, 0, 255);
+.sonboxx1{
+    display: block;
+    height: 100px;
+    width: 50px;
 }
-.sonbox.color2{
-    background-color: rgb(0, 0, 255);
+.sonboxx1.color1{
+    background-color: #544e4e;
 }
-.sonbox.color3{
-    background-color: rgb(0, 0, 255);
+.sonboxx1.color2{
+    
+    background-color: #f57878;
 }
-.sonboxx.color1{
-    background-color: rgb(0, 0, 255);
+.sonboxx1.color3{
+    
+    background-color: #7f6df2;
 }
-.sonboxx.color2{
-    background-color: rgb(0, 0, 255);
+.sonboxx2{
+    display: block;
+    height: 100px;
 }
-.sonboxx.color3{
-    background-color: rgb(0, 0, 255);
+.sonboxx2.color1{
+    
+    background-color: #107548;
 }
-.sonbox.color7{
-    background-color: rgb(0, 0, 255);
+.sonboxx2.color2{
+    
+    background-color: #a4bc2c;
 }
-.sonbox.color8{
-    background-color: rgb(0, 0, 255);
+.sonboxx2.color3{
+    
+    background-color: #b527c8;
 }
-.sonbox.color9{
-    background-color: rgb(0, 0, 255);
+.sonboxx3{
+    display: inline-block;
+    height: 100%;
+    width: 100px;
+}
+.sonboxx3.color1{
+    
+    background-color: #3c0497;
+}
+.sonboxx3.color2{
+    
+    background-color: #2cb7bc;
+}
+.sonboxx3.color3{
+    
+    background-color: #b93f3f;
+}
+.sonboxx4{
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+    
+}
+.sonboxx4.color1{
+    
+    background-color: #edc376;
+}
+.sonboxx4.color2{
+    
+    background-color: #0cdca1;
+}
+.sonboxx4.color3{
+    
+    background-color: #8a3894;
 }

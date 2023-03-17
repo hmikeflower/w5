@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+html,body{
+    height: 100%;
+}
+.wrapper{
+    height: 100%;
+    overflow: hidden;
+    background: #b3dced; /* Old browsers */
+    background: -moz-linear-gradient(top, #b3dced 0%, #29b8e5 1%, #bce0ee 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b3dced 0%,#29b8e5 1%,#bce0ee 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b3dced 0%,#29b8e5 1%,#bce0ee 100%);
+}
