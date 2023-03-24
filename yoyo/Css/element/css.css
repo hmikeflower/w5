@@ -55,8 +55,7 @@ body{
 }
 .sonboxx1{
     display: block;
-    height: 100px;
-    width: 50px;
+    height: 50px;
 }
 .sonboxx1.color1{
     background-color: #544e4e;
