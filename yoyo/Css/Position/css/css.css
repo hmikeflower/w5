@@ -1,39 +1,95 @@
 *{
-    box-sizing: border-box;
     position: relative;
+    box-sizing: border-box;
 }
 .wrapper{
-    width: 600px;
-    height: 600px;
-    display: inline-block;
-    background-color: aqua;
+    width: 800px;
+    height: 800px;
+    background-color: #05d1ff;
+    left: 100px;
+    top: 100px;
 }
-/* .post{
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    background-color: aqua;
-    font-size: 40px;
-} */
-.absolute{
+.post{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(225, 255, 0);
     position: absolute;
-    background-color: blue;
-    width: 50px;
-    height: 50px;
 }
-.first{
-    left: 0;
+.box{
+    right: 0;
     top: 0;
+}
+.boxx{
+    bottom: 0;
+    left: 0;
+}
+.boxxx{
+    bottom: 0;
+    right: 0;
+}
+.boxxxx{
+    top: 0;
+    left: 0;
+}
+.card{
+    height: 600px;
+    width: 600px;
+    background-color: #0400ff;
+    top: 100px;
+    margin: 0 auto;
+}
+.product{
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    position: absolute;
+}
+.colorbox1{
+    width: 100%;
+    height:100%;
+    background-color: rgb(255, 106, 0);
+    position: absolute;
+}
+.info{
+    width: 90%;
+    height:78%;
+    background-color:#fb03d6;
+    position: absolute;
+    bottom: 30px;
+} 
+.image{
+    width: 300px;
+    height:300px;
+    position: absolute;
+    border-radius: 150px;
+    overflow: hidden;
+}
+.name{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    text-align: center;
 }
 .second{
-    right: 0;
-    top: 0;
+    font-size: 16px;
+    color: rgb(247, 137, 3);
 }
-.third{
-    left: 0;
-    bottom: 0;
+.des{
+    font-size: 16px;
+    color: rgb(124, 119, 119);
+    text-align: center;
+    margin-bottom: 16px;
+    
 }
-.fourth{
-    right: 0;
-    bottom: 0;
+.btn{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(6, 243, 200);
+    color: white;
+    text-align: center;
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
