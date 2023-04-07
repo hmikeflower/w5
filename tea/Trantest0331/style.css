@@ -1,0 +1,107 @@
+*{
+    position: relative;
+}
+.wrapper{
+    border: 1px solid black;
+    height: 600px;
+    /* width: 600px; */
+    position: relative;
+}
+
+.bbox{
+    height: 100px;
+    width: 100px;
+    background-color: yellowgreen;
+    margin: 0 auto;
+    top: 50px;
+    
+}
+.box{
+    background-color: rgb(119, 101, 21);
+    top: 60px;
+    /* transform: translate(100px,100px); */
+    /* transform: translateX(100px); */
+    transform: translateY(100%) translateX(100%);
+}
+.box1{
+    background-color: rgb(171, 165, 140);
+    top: 70px;
+    transform:scale(0.5);
+}
+.box2{
+    background-color: rgb(39, 199, 116);
+    top: 80px;
+    transform: rotate(45deg);
+}
+.box3{
+    background-color: rgb(39, 159, 199);
+    top: 90px;
+    transform: skewY(-45deg);
+}
+
+
+.sonbox{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(236, 238, 232);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.card{
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.colorbox{
+    height: 50%;
+    width: 100%;
+    background-color: plum;
+    transform: skew(45deg);
+}
+.colorbox1{
+    height: 50%;
+    width: 100%;
+    background-color: rgb(109, 27, 109);
+    transform: skew(-45deg);
+}
+
+.product{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 100%;
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    /* background-color: plum; */
+}
+.name{
+    width: 100px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+.dec{
+    width: 100%;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+
