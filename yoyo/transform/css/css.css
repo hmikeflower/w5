@@ -1,0 +1,42 @@
+*{
+    position: relative;
+}
+.wrapper{
+    height: 600px;
+    border: 10px solid aqua;
+}
+.bbox{
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    top: 100px;
+}
+.box{
+    background-color: blue;
+    top: 110px;
+    transform: translate(100,100); 
+}
+.box1{
+    background-color: rgb(102, 255, 0);
+    top: 120px;
+    transform: scale(0.5);
+}
+.box2{
+    background-color: rgb(255, 136, 0);
+    top: 130px;
+    transform: rotate(45deg);
+}
+.box3{
+    background-color: rgb(179, 0, 255);
+    top: 140px;
+    transform: skew(10deg);
+}
+.sonbox{
+    height: 100px;
+    width: 100px;
+    border: 10px solid aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
